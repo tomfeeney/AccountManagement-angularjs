@@ -1,0 +1,86 @@
+
+<!-- FORM MODAL TEMPLATE -->
+
+<div class="modalcontainer">
+  <div class="modalheader">
+    <a href="javascript:;" class="modallogocontainer">
+      <span class="modallogotext"> Registration Form </span>
+    </a>
+    <ul class="modalmainnavright">
+      <li><a class="closeicon" ng-click="cancel()"><span></span></a></li>
+    </ul>
+  </div>
+
+  <div class="modalcontentwrapper maxcontentheight">
+    <div class="modalcontent">
+      <div class="formcontenttext">User Information</div>                 
+      <div class="formfieldcontainer"> 
+        <label class="formlabel">
+          <span class="formlabeltext">First Name</span>
+          <span class="formlabelinput">
+            <input placeholder="first name" class="formlabelplace"/>
+          </span>
+        </label>
+      </div>
+
+      <div class="clear"></div>
+                    
+      <div class="formfieldcontainer"> 
+        <label class="formlabel">
+          <span class="formlabeltext">Last Name</span>
+          <span class="formlabelinput">
+            <input placeholder="last name" class="formlabelplace"/>
+          </span>
+        </label>
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="formfieldcontainer"> 
+        <label class="formlabel">
+          <span class="formlabeltext">Password</span>
+          <span class="formlabelinput">
+            <input type="password" placeholder="password" class="formlabelplace"/>
+          </span>
+        </label>
+      </div> 
+
+      <div class="clear"></div>
+    
+      <div class="formfieldcontainer">  
+        <label class="formlabel">
+          <span class="formlabeltext">Confirm Password</span>
+          <span class="formlabelinput">
+            <input type="password" placeholder="re-enter password" class="formlabelplace"/>
+          </span>
+        </label>
+      </div> 
+      
+      <div class="clear"></div>
+      
+      <div class="formfieldcontainer">  
+        <label class="formlabel">
+          <span class="formlabeltext emptyspan pull-left">&nbsp;</span>
+          <span class="checkboxwrapper pull-left">
+            <input id="terms_overlay" type="checkbox">
+            <label for ="terms_overlay" >
+              <span class="addpaddingleft"></span>
+              I have read and accept the 
+            </label>
+            <span class="checkboxtext"><a href="javascript:;">Terms of Service</a></span>
+          </span>
+        </label>
+      </div> 
+    </div>  
+    <div class="clear"></div>
+  </div>
+
+  <div class="modalfooter"> 
+    <div class="footertext buttonwrapper">
+      <button class="primarybutton addmarginright">Submit </button>
+      <button class="secondarybutton" ng-click="cancel()">Cancel </button>
+    </div>
+  </div>
+</div>  
+
+<!-- END FORM MODAL TEMPLATE -->

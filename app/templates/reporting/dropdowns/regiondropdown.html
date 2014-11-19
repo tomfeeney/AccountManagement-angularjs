@@ -1,0 +1,15 @@
+<!-- REGION DROPDOWN TEMPLATE -->
+
+<div class="gridonequarter addmarginbottom">
+  <div class="addpaddingright firstchild ignoreboxshadow grey">
+    <span class="formlabeltext">Region</span>
+    <ui-select class="autoheight addbordergrey pull-left"  ng-model="country.selected" theme="selectize" ng-disabled="disabled">
+      <match placeholder="Select country">{{$select.selected.name}}</match>
+      <choices repeat="country in filtercountryOptions.stores | filter: $select.search">
+        <span ng-bind-html="country.name | highlight: $select.search"></span>
+      </choices>
+    </ui-select>
+  </div>  
+</div>  
+
+<!-- END REGION DROPDOWN TEMPLATE -->

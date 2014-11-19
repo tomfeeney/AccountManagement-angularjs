@@ -1,0 +1,46 @@
+<!-- LAYOUT HTML -->
+ <div ng-controller="SearchSelectController">
+
+  <section>
+    <div class="constrainedwidth">
+      <div class="addpadding whitebg firstchild lastchild autoheight">
+        <section>
+          <div class="constrainedwidth">
+              <h3 class="ignoremargin grey">{{message}}</h3>
+          </div>
+        </section>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="spacer ignoreboxshadow firstchild lastchild spacer ignorebackground">
+
+    <div class="addpaddingright firstchild ignoreboxshadow grey" data-ng-include="templateone.url">
+    </div>
+    <div class="addpaddingright ignoreboxshadow grey" data-ng-include="templatetwo.url">
+    </div>
+    <div class="addpaddingright ignoreboxshadow grey" data-ng-include="templatethree.url">
+    </div>
+    
+  </div>  
+  <div class="clear"></div>
+
+  <div class="ng-scope" ng-controller="TabsController" ng-init="initializetabs()"> 
+    <tabset>
+      <tab ng-repeat="tab in tabs" active="tab.active" heading="{{tab.title}}" active="tab.active">
+        <div ng-include="tab.content"></div>
+      </tab>
+    </tabset>
+  </div
+   
+</div>
+
+
+<!-- END LAYOUT HTML -->
+
+
+
+
+

@@ -1,0 +1,115 @@
+
+/* FONT STYLES */
+
+@font-face {
+	font-family: 'HP Simplified';
+	src: url('fonts/HPSimplifiedW01-Regular.eot'); /* IE9 Compat Modes */
+	src: url('fonts/HPSimplifiedW01-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('fonts/HPSimplifiedW01-Regular.woff') format('woff'), /* Modern Browsers */
+	     url('fonts/HPSimplifiedW01-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('fonts/HPSimplifiedW01-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'HP Simplified';
+	src: url('fonts/HPSimplifiedW01-bold.eot'); /* IE9 Compat Modes */
+	src: url('fonts/HPSimplifiedW01-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('fonts/HPSimplifiedW01-bold.woff') format('woff'), /* Modern Browsers */
+	     url('fonts/HPSimplifiedW01-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('fonts/HPSimplifiedW01-bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-weight: bold;
+}
+
+/* END FONT STYLES */
+
+
+/* TYPOGRAPHY */
+
+h1{
+  font-size: 36px !important;
+}
+
+h2{
+  font-size: 30px !important;
+}
+
+h3{
+  font-size: 24px !important;
+}
+
+h4{
+  font-size: 18px !important;
+}
+
+h5{
+  font-size: 14px !important;
+}
+
+h6{
+  font-size: 12px !important;
+}
+
+small{
+  font-size: 85% !important;
+}
+
+b,strong{
+  font-weight: bold !important;
+}
+
+abbr[title], abbr[data-original-title] {
+  border-bottom: 1px dotted #999999;
+  cursor: help;
+}
+
+abbr.initialism {
+  font-size: 90% !important;
+  text-transform: uppercase !important;
+}
+
+address {
+  display: block;
+  font-style: normal;
+  line-height: 1.42857;
+  margin-bottom: 20px;
+}
+
+dt{
+  font-weight: bold !important;
+}
+
+dt,dd{
+  line-height: 1.42857 !important;
+}
+
+a {
+  text-decoration: none;
+  /** ADDED by Tom **/
+  color: #0d97d2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* END TYPOGRAPHY */
+
+.font-10 {
+  color: #86888a;
+  font-size: 10px;
+  line-height: 25px;
+}
+.font-12 {
+  color: #86888a;
+  font-size: 12px;
+  line-height: 20px;
+}
+.lineHeight40 {
+  line-height: 40px !important;
+}
+.font-14 {
+  color: #86888a;
+  font-size: 14px;
+  line-height: 14px;
+}

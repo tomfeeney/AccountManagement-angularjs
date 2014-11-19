@@ -1,0 +1,1034 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+<title>Account Management</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="img/favicon.ico">
+ 
+<!-- Le HTML5 shim, for IE6-8 supporting of HTML5 elements -->
+ 
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/iehtml5elements.js"></script>
+<![endif]-->
+ 
+</head>
+ 
+<body>
+ 
+<!-- ================================================== CONTAINER ================================================== -->
+<!--Insert Code below-->
+<section>
+    <div class="constrainedwidth">
+	    <div class="spacerhead firstchild lastchild">
+
+	    	<div class="notificationbar successnotification">
+          		<div class="notificationiconcontainer">
+            		<div class="notificationicon successicon"></div>
+          		</div>
+                	<p class="notificationtext"><strong>Success!</strong> Your payment method (My Master Card) has been created.</p>
+                  	<div class="notificationiconcontainer">
+                    	<div class="notificationicon successcloseicon"></div>
+                  	</div>
+            	</div>
+      		</div>
+
+      		<div class="spacerhead firstchild lastchild">
+        		<div class="panel">Payment Method List</div>
+      		</div>
+
+	    </div>
+    </div>
+</section>
+
+<section>
+    <div class="constrainedwidth">
+	    <div class="spacerextra firstchild lastchild">
+
+	    	<a data-toggle="modal" href="#addPayment" class="pull-right"><figure class="hpux gray plus ignoremargin displayinlineblock"></figure> Add Payment Method</a>
+
+	    </div>
+    </div>
+</section>
+  
+<div class="clear"></div>
+
+<section>
+    <div class="constrainedwidth">
+	    <div class="spacerTab firstchild lastchild">
+
+	    	<ul class="nav nav-tabs" data-tabs="tabs">
+				<li class="active"><a class="textcolor" href="#payment" data-toggle="tab">Payment Methods</a></li>
+				<li><a class="textcolor" href="#billing" data-toggle="tab">Billing History</a></li>
+			</ul>
+
+			<!-- Begin Tabs -->
+			<div class="tab-content">
+				<!-- Tab 1 -->
+				<div class="tab-pane active" id="payment">
+
+					<section>
+						<div class="constrainedwidth">
+							<div class="gridthreequarters">
+								<div class="spacer firstchild ignoreborder">
+									<div class="media">
+										<a class="pull-left" href="#paymentInfo" data-toggle="modal">
+	              							<figure class="hpux large mastercard credit-card ignoremarginleft"></figure>
+	            						</a>
+	            						<div class="media-body">
+	            							<div class="clear"></div>
+
+								                <table class="am_table profileTable">
+								                  	<thead>
+								                    	<tr>
+								                      		<th>My Master Card</th>
+								                    	</tr>
+								                  	</thead>
+								                  	<tbody>
+								                    	<tr>
+								                      		<td class="">Jane Smith</td>
+								                    	</tr>
+								                    	<tr>
+								                      		<td class="">xxxx xxxx xxxx 1234</td>
+								                    	</tr>
+								                    	<tr>
+								                      		<td class="">08/2018</td>
+								                    	</tr>
+								                    	<tr>
+								                      		<td class="">United States</td>
+								                    	</tr>
+								                  	</tbody>
+								                </table>
+								            </div>
+								        </div>
+
+            					</div>
+							</div>
+
+							<div class="gridonequarter">
+								<div class="spacer lastchild ignoreborder">
+
+									<div class="clear"></div>
+
+									<div class="buttonwrapper">
+										<div class="tooltipcontainer textNoShadow pull-right">
+              								<a href="#paymentDetails" data-toggle="modal" data-placement="left" data-toggle="tooltip" class="btn btn-icon displayinlineblock" type="button" data-original-title="Tooltip content goes here.">
+              									<span class="displayHelper"><figure class="hpux gray edit ignoremargin"></figure></span>
+              								</a>
+              							</div>
+										<div class="tooltipcontainer textNoShadow pull-right addmarginright">
+              								<a href="#deletePayment" data-toggle="modal" data-placement="left" data-toggle="tooltip" class="btn btn-icon displayinlineblock addPadding8" type="button" data-original-title="Tooltip content goes here.">
+              									<span class="displayHelper"><figure class="hpux gray close ignoremargin"></figure></span>
+              								</a>
+              							</div>
+									</div>
+
+            					</div>
+            				</div>
+						</div>
+						<!-- Default message goes here -->
+						<span class="pull-right bottmRight addpaddingright"><p>* Default</p></span>
+						<!-- END Default message -->
+					</section>
+
+					<div class="clear"></div><hr>
+
+					<section>
+						<div class="constrainedwidth">
+							<div class="gridthreequarters">
+								<div class="spacer firstchild ignoreborder">
+									<div class="media">
+										<a class="pull-left" href="#paymentInfo" data-toggle="modal">
+	              							<figure class="hpux large visa credit-card ignoremarginleft"></figure>
+	            						</a>
+	            						<div class="media-body">
+	            							<div class="clear"></div>
+
+								                <table class="am_table profileTable">
+								                  	<thead>
+								                    	<tr>
+								                      		<th>My Visa Card</th>
+								                    	</tr>
+								                  	</thead>
+								                  	<tbody>
+								                    	<tr>
+								                      		<td class="">Jane Smith</td>
+								                    	</tr>
+								                    	<tr>
+								                      		<td class="">xxxx xxxx xxxx 1234</td>
+								                    	</tr>
+								                    	<tr>
+								                      		<td class="">08/2018</td>
+								                    	</tr>
+								                    	<tr>
+								                      		<td class="">United States</td>
+								                    	</tr>
+								                  	</tbody>
+								                </table>
+								            </div>
+								        </div>
+
+            					</div>
+							</div>
+
+							<div class="gridonequarter">
+								<div class="spacer lastchild ignoreborder">
+
+									<div class="clear"></div>
+
+									<div class="buttonwrapper">
+										<div class="tooltipcontainer textNoShadow pull-right">
+              								<a href="#paymentDetails" data-toggle="modal" data-placement="left" data-toggle="tooltip" class="btn btn-icon displayinlineblock" type="button" data-original-title="Tooltip content goes here.">
+              									<span class="displayHelper"><figure class="hpux gray edit ignoremargin"></figure></span>
+              								</a>
+              							</div>
+										<div class="tooltipcontainer textNoShadow pull-right addmarginright">
+              								<a href="#deletePayment" data-toggle="modal" data-placement="left" data-toggle="tooltip" class="btn btn-icon displayinlineblock addPadding8" type="button" data-original-title="Tooltip content goes here.">
+              									<span class="displayHelper"><figure class="hpux gray close ignoremargin"></figure></span>
+              								</a>
+              							</div>
+									</div>
+
+            					</div>
+            				</div>
+						</div>
+					</section>
+
+				</div>
+				<!-- END Tab 1 -->
+				<!-- Tab 2 -->
+				<div class="tab-pane" id="billing">
+					
+					<section>
+						<div class="constrainedwidth">
+							<div class="spacer firstchild lastchild ignoreborder">
+								<div class="formfieldcontainer displayblock pull-right">
+            							<span class="formlabelsearch">
+                							<div class="btn-group">
+                  								<a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    								<figure class="hpux gray filter ignoremargin addmarginTenTop"></figure>
+                  								</a>
+                  								<ul class="dropdown-menu" role="menu">
+								                    <li><a href="#">All Type Apps</a></li>
+								                    <li><a href="#">One Time Apps</a></li>
+								                    <li><a href="#">Subscription</a></li>
+                  								</ul>
+                							</div>
+              							</span>
+
+              							<div class="search_wrapper"> 
+								        	<input placeholder="Search" /> 
+								        		<span></span> 
+      									</div>
+      									
+      									<div class="clear"></div>
+  							</div>
+						</div>
+					</section>
+
+					<div class="clear"></div>
+
+						<table class="table">
+			              	<thead>
+			                	<tr class="textNoShadow">
+			                  		<th class="text-left">Order Placed</th>
+			                  		<th class="text-left">Product Info</th>
+			                  		<th class="sorttable text-left">Price<span class="sorticon"></span></th>
+			                  		<th class="sorttable text-left">Type<span class="sorticon"></span></th>
+			                  		<th class="text-right addpaddingright">Action</th>
+			                	</tr>
+			              	</thead>
+			              	<tbody>
+			                	<tr class="textNoShadow">
+				                  	<td class="text-left">
+				                    	<strong>{order-date} 1</strong><br />
+				                    	ORDER: {order-number}<br />
+				                    	BUYER: {buyer}<br />
+				                    	TOTAL: {total}<br />
+				                    	<a href="#paymentDetails" data-toggle="modal">Order Details</a>
+				                  	</td>
+			                  		<td class="text-left">
+			                        	<table class="nested_table">
+				                          	<tr class="font-12 lineHeight40">
+				                            	<td class="text-left"><figure class="hpux gray desktop ignoremargin pull-left"></figure>001b-a</td>
+				                          	</tr>
+				                          	<tr class="font-12 lineHeight40">
+				                            	<td class="text-left"><figure class="hpux gray desktop ignoremargin pull-left"></figure>001b-b</td>
+				                          	</tr>
+			                        	</table>
+			                  		</td>
+			                  		<td class="text-left">
+				                        <table class="nested_table">
+				                          	<tr class="font-12 lineHeight40">
+				                            	<td class="text-left">001d-c</td>
+				                          	</tr>
+				                          	<tr class="font-12 lineHeight40">
+				                            	<td class="text-left">001d-b</td>
+				                          	</tr>
+				                        </table>
+			                  		</td>
+			                  		<td class="text-left">
+				                        <table class="nested_table">
+				                          	<tr class="font-12 lineHeight40">
+				                            	<td class="text-left">001d-c</td>
+				                          	</tr>
+				                          	<tr class="font-12 lineHeight40">
+				                            	<td class="text-left">001d-b</td>
+				                          	</tr>
+				                        </table>
+			                  		</td>
+			                  		<td class="text-right addpaddingright">
+			                        	<table class="nested_table">
+				                          	<tr class="font-12 lineHeight40">
+				                            	<td class="text-left">&nbsp;</td>
+				                          	</tr>
+				                          	<tr class="font-12 lineHeight40">
+				                            	<td class="text-left">&nbsp;</td>
+				                          	</tr>
+				                        </table>
+			                  		</td>
+			                	</tr>
+
+			                	<tr class="textNoShadow">
+			                  		<td class="text-left">
+					                    <strong>{order-date} 2</strong><br />
+					                    ORDER: {order-number}<br />
+					                    BUYER: {buyer}<br />
+					                    TOTAL: {total}<br />
+					                    <a href="#paymentDetails" data-toggle="modal">Order Details</a>
+				                  	</td>
+			                  		<td class="text-left lineHeight40"><figure class="hpux gray desktop ignoremargin pull-left"></figure>{product-info}</td>
+			                  		<td class="text-left">{product-price}</td>
+			                  		<td class="text-left">{product-type}</td>
+			                  		<td class="text-right addpaddingright">
+			                    		<div class="btn-group">
+			                      			<button type="button" class="btn btn-action dropdown-toggle" data-toggle="dropdown">
+			                        			<figure class="hpux gray dropdown-caret down ignoremargin addmargin"></figure>
+			                      			</button>
+			                      				<ul class="dropdown-menu" role="menu">
+							                        <li><a href="#editSubscription" data-dismiss="modal" data-toggle="modal">Edit Subscription</a></li>
+							                        <li><a href="#cancelSubscription" data-dismiss="modal" data-toggle="modal">Cancel Subscription</a></li>
+			                      				</ul>
+			                    		</div>
+			                  		</td>
+			                	</tr>
+
+			                	<tr class="textNoShadow">
+			                  		<td class="text-left">
+					                    <strong>{order-date} 3</strong><br />
+					                    ORDER: {order-number}<br />
+					                    BUYER: {buyer}<br />
+					                    TOTAL: {total}<br />
+					                    <a href="#paymentDetails" data-toggle="modal">Order Details</a>
+					                 </td>
+			                  		<td class="text-left lineHeight40"><figure class="hpux gray desktop ignoremargin pull-left"></figure>{product-info}</td>
+			                  		<td class="text-left">{product-price}</td>
+			                  		<td class="text-left">{product-type}</td>
+			                  		<td class="text-right addpaddingright">{product-actions}</td>
+			                	</tr>
+
+			              	</tbody>
+			            </table>
+
+				</div>
+				<!-- END Tab 2 -->
+
+			</div>
+			<!-- END Tabs -->
+			<small><p>To change the Payment Method used for your current subscriptions, to to the '<a href="#">On My Device(s)</a>' page</p></small>
+
+	    </div>
+    </div>
+</section>
+  
+<div class="clear"></div>
+
+<!-- Footer -->
+<section>
+	<div class="constrainedwidth">
+		<a href="004.html">prev</a> | <a href="005.html">next</a>
+	</div>
+</section>
+<!-- END Footer -->
+
+ 
+<!--Insert Code above-->
+<!-- ================================================== END CONTAINER ================================================== -->
+
+<!-- ====================================================== Modals ====================================================== -->
+	<!-- User Info -->
+  	<div class="modal overflowscroll fade" id="paymentDetails">
+    	<div class="modal-dialog">
+	      	<div class="modalcontainer">
+	        	<div class="modalheader">
+	          		<a href="javascript:;" class="modallogocontainer">
+	            		<span class="modallogotext"> Type Payment Details </span>
+	          		</a>
+	            	<!-- <ul class="modalmainnavright">
+              		<li><a class="icon_close" data-dismiss="modal"><span></span></a></li>
+            		</ul> -->
+        		</div>
+        		<div class="modalcontentwrapper">
+          			<div class="modalcontent">
+
+	          			<!-- ========== start form ========= -->
+						<div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">Payment Method Name:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                    					<span class="formlabelinput">
+	                      						<input class="formlabelplace" placeholder="first name">
+	                    					</span>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+	          			<div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">Cardholder Name:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                  						<div class="gridModal">
+		                    					<span class="formlabelinput">
+		                      						<input placeholder="first name" class="formlabelplace">
+		                    					</span>
+		                    				</div>
+		                    				<div class="gridModalRt">
+		                    					<span class="formlabelinput">
+		                      						<input placeholder="last name" class="formlabelplace">
+		                    					</span>
+		                    				</div>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+	          			<div class="formfieldcontainer">
+							<label class="formlabel">
+								<span class="formlabeltext">Payment Method</span>
+								<span class="formlabelinput imageinputcontainer ignorepadding">
+									<select name="imagesinputwrapper" class="imagesinputwrapper">
+										<option value="amex" data-image="css/images/creditcards/americanexpress.png"></option>
+										<option value="Discover" data-image="css/images/creditcards/discovercard.png"></option>
+										<option value="Mastercard" data-image="css/images/creditcards/mastercard.png"></option>
+										<option value="Visa" data-image="css/images/creditcards/visacard.png"></option>
+										<option value="Paypal" data-image="css/images/creditcards/paypal.png"></option>
+									</select>
+								</span>
+							</label>
+						</div>
+							 
+						<div class="clear"></div>
+
+						<div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">Card Number:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                    					<span class="formlabelinput">
+	                      						<input class="formlabelplace" placeholder="card number">
+	                    					</span>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+	          			<div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">CVV / Expiration Date:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                  						<div class="gridModal">
+		                    					<span class="formlabelinput">
+		                      						<input placeholder="CVV" class="formlabelplace">
+		                    					</span>
+		                    				</div>
+		                    				<div class="gridModalRt">
+		                    					<span class="formlabelinput">
+		                      						<input class="formlabelplace datepickerwrapper" placeholder="Date" type="text">
+		                    					</span>
+		                    				</div>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+						<div class="formfieldcontainer">
+				            <label class="formlabel">
+				              	<span class="formlabeltext">Country:*
+				                	<span class="pull-right addmarginright">
+				                  		<div class="tooltipcontainer textNoShadow">
+				                    		<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+				                      			<figure class="hpux notification error"></figure>
+				                    		</a>
+				                  		</div>
+				                	</span>
+				              	</span>
+				              	<!-- <div class="gridonehalf"> -->
+				              		<span class="formlabelinput ignorepadding">
+					                	<select class="search_selection_options" tabindex="7">
+						                  	<option value="select language">None</option>
+						                  	<optgroup label="United States">
+							                    <option value="california">California</option>
+							                    <option value="texas">Texas</option>
+							                    <option value="seattle">Seattle</option>
+							                    <option value="new york">New York</option>
+						                  	</optgroup>
+							                <option value="United Kingdom">United Kingdom</option>
+							                <option value="Afghanistan">Afghanistan</option>
+							                <option value="Aland Islands">Aland Islands</option>
+							                <option value="Albania">Albania</option>
+							                <option value="India">India</option>
+							                <option value="Pakistan">Pakistan</option>
+						                </select>
+						            </span>
+						        <!-- </div> -->
+				            </label>
+				        </div>
+				             
+				        <div class="clear"></div>
+
+				        <div class="formfieldcontainer formwithvalidation">
+				            <label class="formlabel">
+				              	<span class="formlabeltext">Address 1:*</span>
+				              		<div class="mediaformcontainer">
+				                	<div class="media">
+				                  		<span class="pull-right">
+				                    		<div class="tooltipcontainer textNoShadow">
+				                      			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+				                        			<figure class="hpux validation success"></figure>
+				                      			</a>
+				                    		</div>
+				                  		</span>
+				                  		<div class="media-body">
+				                    		<span class="formlabelinput">
+				                      			<input class="formlabelplace" placeholder="Address 1">
+				                    		</span>
+				                  		</div>
+				                	</div>
+				             	</div>
+				            </label>
+				        </div>
+				          
+				        <div class="clear"></div>
+
+				        <div class="formfieldcontainer formwithvalidation">
+				            <label class="formlabel">
+				              	<span class="formlabeltext">Address 2:</span>
+				              		<div class="mediaformcontainer">
+				                	<div class="media">
+				                  		<span class="pull-right">
+				                    		<div class="tooltipcontainer textNoShadow">
+				                      			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+				                        			<figure class="hpux validation success"></figure>
+				                      			</a>
+				                    		</div>
+				                  		</span>
+				                  		<div class="media-body">
+				                    		<span class="formlabelinput">
+				                      			<input class="formlabelplace" placeholder="Address 2">
+				                    		</span>
+				                  		</div>
+				                	</div>
+				             	</div>
+				            </label>
+				        </div>
+				          
+				        <div class="clear"></div>
+
+				        <div class="formfieldcontainer formwithvalidation">
+				            <label class="formlabel">
+				              	<span class="formlabeltext">Address 3:</span>
+				              		<div class="mediaformcontainer">
+				                	<div class="media">
+				                  		<span class="pull-right">
+				                    		<div class="tooltipcontainer textNoShadow">
+				                      			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+				                        			<figure class="hpux validation success"></figure>
+				                      			</a>
+				                    		</div>
+				                  		</span>
+				                  		<div class="media-body">
+				                    		<span class="formlabelinput">
+				                      			<input class="formlabelplace" placeholder="Address 3">
+				                    		</span>
+				                  		</div>
+				                	</div>
+				             	</div>
+				            </label>
+				        </div>
+				          
+				        <div class="clear"></div>
+
+				         <div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">City / State:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                  						<div class="gridModal">
+		                    					<span class="formlabelinput">
+				                      				<input class="formlabelplace" placeholder="City">
+				                    			</span>
+		                    				</div>
+		                    				<div class="gridModalRt">
+		                    					<span class="formlabelinput ignorepadding">
+								                	<select class="search_selection_options" tabindex="7">
+									                  	<option value="select language">None</option>
+									                  	<optgroup label="United States">
+										                    <option value="california">California</option>
+										                    <option value="texas">Texas</option>
+										                    <option value="seattle">Seattle</option>
+										                    <option value="new york">New York</option>
+									                  	</optgroup>
+										                <option value="United Kingdom">United Kingdom</option>
+										                <option value="Afghanistan">Afghanistan</option>
+										                <option value="Aland Islands">Aland Islands</option>
+										                <option value="Albania">Albania</option>
+										                <option value="India">India</option>
+										                <option value="Pakistan">Pakistan</option>
+									                </select>
+									            </span>
+		                    				</div>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+				             
+				        <div class="clear"></div>
+
+				        <div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">Postal Code / Phone:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                  						<div class="gridModal">
+		                    					<span class="formlabelinput">
+		                      						<input placeholder="postal code" class="formlabelplace">
+		                    					</span>
+		                    				</div>
+		                    				<div class="gridModalRt">
+		                    					<span class="formlabelinput">
+		                      						<input placeholder="phone" class="formlabelplace">
+		                    					</span>
+		                    				</div>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+	          			<div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">Set as Default:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                  						<div class="gridModal">
+
+		                      						<div class="switch-toggle switch-container">
+														<input checked="" name="refreshtokenonoff" id="toggleon" type="radio">
+															<label onclick="" for="toggleon">Default</label>
+																<input name="refreshtokenonoff" id="toggleoff" type="radio">
+															<label onclick="" for="toggleoff">No</label>
+															<a></a>
+													</div>
+
+		                    				</div>
+		                    				<div class="gridModalRt">
+
+		                    				</div>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+	          			<div class="formfieldcontainer formwithvalidation">
+				            <label class="formlabel">
+				              	<span class="formlabeltext">&nbsp;</span>
+				              		<div class="mediaformcontainer">
+				                	<div class="media">
+				                  		
+				                  		<div class="media-body">
+				                    		<span class="font-12">
+												<p>Keeping the slider on default sets this Payment Method to be used by default on all new purchases. It does not change the Payment Method
+												used on existing Subscriptions. To update the Payment Method on
+												existing Subscriptions, go to the <a href="#">My Products</a></p>
+											</span>
+				                  		</div>
+				                	</div>
+				             	</div>
+				            </label>
+				        </div>
+				          
+				        <div class="clear"></div>
+	        
+	          			<span class="red font-12"><p>Fields with * (asterisks) are mandatory.</p></span>
+
+          			</div>
+        		</div>
+        		<div class="modalfooter">
+          			<div class="footertext buttonwrapper">
+            			<button type="button" class="secondarybutton addmarginright" data-dismiss="modal">Close</button>
+            			<button type="button" class="primarybutton">Save</button>
+          			</div>
+        		</div>
+      		</div>
+    	</div>
+  	</div>
+<!-- End Modal -->
+
+<!-- Modal Edit Subscription -->
+  <div class="modal modalstandard fade" id="editSubscription">
+    <div class="modal-dialog modal-mega">
+      <div class="modalcontainer">
+        <div class="modalheader">
+          <a href="javascript:;" class="modallogocontainer">
+            <span class="modallogotext"> Edit Subscription </span>
+          </a>
+            
+        </div>
+        <div class="modalcontent maxcontentheight">
+          <p class="text-center grey">Are you sure you want to change “Smart Office” purchased?</p>
+                
+                <section>
+					<div class="constrainedwidth">
+						<div class="gridonehalf">
+							<div class="spacer firstchild ignoreborder">
+								<table class="accntmanage_table profileTable">
+				                  	<tbody>
+				                    	<tr>
+				                      		<td>Order No.:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Item Name:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Purchase Date:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                  	</tbody>
+				                </table>
+            				</div>
+						</div>
+						<div class="gridonehalf">
+							<div class="spacer lastchild ignoreborder">
+								<table class="accntmanage_table profileTable">
+				                  	<tbody>
+				                    	<tr>
+				                      		<td class="text-right">Subtotal:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td class="text-right">Tax:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td class="text-right">Total:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                  	</tbody>
+			                	</table>
+			            	</div>
+						</div>
+					</div>
+				</section>
+				
+				<div class="clear"></div>
+
+               	<div class="formfieldcontainer">
+					<label class="formlabel">
+						<span class="formlabeltext">Payment Method</span>
+						<div class="gridonethird">
+							<span class="formlabelinput imageinputcontainer ignorepadding">
+								<select name="imagesinputwrapper" class="imagesinputwrapper" tabindex="15">
+									<option value="amex" data-image="css/images/creditcards/americanexpress.png"></option>
+									<option value="Discover" data-image="css/images/creditcards/discovercard.png"></option>
+									<option value="Mastercard" data-image="css/images/creditcards/mastercard.png"></option>
+									<option value="Visa" data-image="css/images/creditcards/visacard.png"></option>
+									<option value="Paypal" data-image="css/images/creditcards/paypal.png"></option>
+								</select>
+							</span>
+						</div>
+						<div class="gridonethird">
+							<span class="addmarginleftright font-14"> | <a href="#">Edit</a><span class="addmarginleftright"></span><a href="#">Add</a></span>
+						</div>
+					</label>
+				</div>
+					 
+				<div class="clear"></div>
+
+				<div class="formfieldcontainer">
+					<label class="formlabel">
+						<span class="formlabeltext">First Name</span>
+						<span class="font-14">Subscription Charge</span>
+					</label>
+				</div>
+				
+				<div class="clear"></div>
+
+				<div class="formfieldcontainer">
+					<label class="formlabel">
+						<span class="formlabeltext">Bill Expired Date</span>
+						<div class="gridonethird">
+							<span class="formlabelinput ignorepadding">
+								<select class="search_selection_options_withoutsearch">
+									<option value=" ">None</option>
+									<option value=" ">Subscription ($5.00 / mnth)</option>
+									<option value=" ">Subscription ($19.00 / yr)</option>
+								</select>
+							</span>
+						</div>
+						<div class="gridonethird">
+							<span class="addmarginleftright font-14"> | <a href="#">Cancel Subscription</a></span>
+						</div>
+					</label>
+				</div>
+
+				<div class="clear"></div>
+
+                <p class="grey">Please click <a href="#cancelSubscription" data-dismiss="modal" data-toggle="modal">here</a> to review the cancellation policy.</p>
+
+        </div>
+        <div class="modalfooter">
+          <div class="footertext buttonwrapper">
+            <button class="secondarybutton addmarginright" data-dismiss="modal">Close </button>
+            <button class="primarybutton">Save </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END Modal -->
+
+<!-- Modal cancel subscription -->
+  <div class="modal modalstandard fade" id="cancelSubscription">
+    <div class="modal-dialog">
+      <div class="modalcontainer">
+        <div class="modalheader">
+          <a href="javascript:;" class="modallogocontainer">
+            <span class="modallogotext"> Cancel Subscription </span>
+          </a>
+           
+        </div>
+        <div class="modalcontent maxcontentheight">
+          <p class="text-center grey">Are you sure you want to cancel “Smart Office” purchased?</p>
+                <section>
+					<div class="constrainedwidth">
+						<div class="gridonehalf">
+							<div class="spacer firstchild ignoreborder">
+								<table class="accntmanage_table profileTable">
+				                  	<tbody>
+				                    	<tr>
+				                      		<td>Order No.:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Item Name:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Purchase Date:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Payment Method:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Type:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Bill Expired Date:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                  	</tbody>
+				                </table>
+            				</div>
+						</div>
+						<div class="gridonehalf">
+							<div class="spacer lastchild ignoreborder">
+								<table class="accntmanage_table profileTable">
+				                  	<tbody>
+				                    	<tr>
+				                      		<td class="text-right">Subtotal:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td class="text-right">Tax:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td class="text-right">Total:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                  	</tbody>
+			                	</table>
+			            	</div>
+						</div>
+					</div>
+				</section>
+
+                 <div class="clear"></div>
+
+                <p class="grey">Please click <a href="#">here</a> to review the cancellation policy.</p>
+
+        </div>
+        <div class="modalfooter">
+          <div class="footertext buttonwrapper">
+            <button class="secondarybutton addmarginright" data-dismiss="modal">No </button>
+            <button class="primarybutton">Yes </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END Modal -->
+
+<!-- Modal cancel subscription -->
+  <div class="modal modalstandard fade" id="deletePayment">
+    <div class="modal-dialog">
+      <div class="modalcontainer">
+        <div class="modalheader">
+          <a href="javascript:;" class="modallogocontainer">
+            <span class="modallogotext"> Delete Payment Method Confrimation </span>
+          </a>
+           
+        </div>
+        <div class="modalcontent maxcontentheight">
+          <p class="text-center grey">Are you sure you want to delete "My Master Card" from Payment Mehtod List?</p>
+        </div>
+        <div class="modalfooter">
+          <div class="footertext buttonwrapper">
+            <button class="secondarybutton addmarginright" data-dismiss="modal">No </button>
+            <button class="primarybutton">Yes </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END Modal -->
+<!-- ====================================================== END Modals ====================================================== -->
+ 
+<!-- SCRIPTING (ALWAYS PUT AT THE END FOR FASTER LOADING OF PAGE)
+==================================================================== -->
+ 
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="js/code.js"></script>
+<script src="js/datepicker.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/popover.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/scrollspy.js"></script>
+<script src="js/stickyscrollspy.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/dropdownheader.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/customselect.js"></script>
+<script src="js/multiselect.js"></script>
+<script src="js/multilevelselect.js"></script>
+<script src="js/imagesselectoption.js"></script>
+<script src="js/section.js"></script>
+<script src="js/jquery.sortElements.js"></script>
+<script src="js/stickyheading.js"></script>
+<script src="js/overlay.js"></script>
+<script src="js/backgroundfocus.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/ie.js"></script>
+<script src="js/localscroll.js"></script>
+<script src="js/scrollTo-min.js"></script>
+<script src="js/imageslider.js"></script>
+<script src="js/prettify.js"></script>
+ 
+<!-- END SCRIPTING
+================================================== -->
+</body>
+</html>

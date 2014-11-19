@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="app"> <!-- id="ng-app" IE<8 -->
+<head>
+<title>Uploads only images (with canvas preview)</title>
+<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" /> -->
+<!-- Fix for old browsers -->
+<script src="http://nervgh.github.io/js/es5-shim.min.js"></script>
+<script src="http://nervgh.github.io/js/es5-sham.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="controllers/console-sham.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<!--<script src="../bower_components/angular/angular.js"></script>-->
+<script src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
+<script src="js/angular-file-upload.js"></script>
+<script src="js/app.js"></script>
+<script src="controllers/controllers.js"></script>
+<!--thumbnails for images-->
+<script src="controllers/directives.js"></script>
+
+<!-- ADDED by Tom -->
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="themes/blue/styles.css" media="all" />
+<style>
+.my-drop-zone { border: dotted 1px lightgray; }
+.nv-file-over { border: 1px dashed #e42217 !important; } **/ /* Default class applied to drop zones on over */
+.another-file-over-class { border: dotted 3px green; }
+html, body { height: 120%; }
+canvas {
+background-color: #f3f3f3;
+-webkit-box-shadow: 2px 1px 2px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 1px 2px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 1px 2px 0px rgba(0,0,0,0.75);
+
+border-radius: 4px;
+height: 100px;
+margin-top: 6px;
+}
+table>tbody>tr:hover{
+  background: none !important;
+}
+.visible {
+    visibility: visible !important;
+}
+.alert {
+    font-size: 12px;
+    padding: 10px;
+}
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1 !important;
+    color: #31708f;
+    margin: 0 4px
+}
+.alert {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+</style>
+</head>
+
+
+<!-- Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
+<body ng-controller="AppController" nv-file-drop="" uploader="uploader">
+<div class="container">
+
+
+
+<section>
+	<div class="constrainedwidth">
+		<div class="spacer firstchild lastchild">
+			
+			<section>
+				<div class="constrainedwidth">
+			        <div class="gridonehalf">
+			            <div class="spacerSub firstchild ignoreborder">
+			            	<h3 class="grey ignoremargin">User Sign Up Using <span class="blue">HP Web<sup><small>ID</small></sup></span></h3>
+			            </div>
+			        </div>
+			        <div class="gridonehalf">
+			            <div class="spacerSub lastchild ignoreborder">
+			            	<span class="pull-right addmargintop grey"><a href="#">Log in</a> using HP WEB ID</span>
+			            </div>
+			        </div>
+				</div>
+			</section>
+
+			<div class="clear"></div> <hr>
+
+			<p class="grey">Create a HP Web ID account</p>
+
+			<!-- ========== start form ========= -->
+      <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+
+			<div class="formfieldcontainer formwithvalidation">
+            <label class="formlabel">
+              <span class="formlabeltext">Image:
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation error"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput dashedborder" nv-file-over="" uploader="uploader">
+                <div class="fileuploadcontainer verticalaligncontainer">
+                  <div class="btn-group autowidth">
+                    <figure class="hpux blue logo ignoremargintopbottom pull-left"></figure>
+                    <p class="ignoremargin pull-right addpaddingtop">Drop files here or Click here to add files.</p>
+                  </div>
+                  <input class="ignorevisible" type="file" nv-file-select="" uploader="uploader" />
+                </div> 
+              </span>
+            </label>
+          </div>
+
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer formwithvalidation">
+            <label class="formlabel">
+              <span class="formlabeltext">&nbsp;</span>
+              <div class="mediaformcontainer">
+                <div class="media">
+                  <span class="font-14 grey">
+                    <p><small>Image requirements: 100px X 100px, jpg or png format.</small></p>
+                  </span>
+                </div>
+              </div>
+            </label>
+          </div>
+          
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer formwithvalidation">
+            <label class="formlabel">
+              <span class="formlabeltext">&nbsp;</span>
+              <div class="mediaformcontainer">
+                <div class="media">
+                  <span class="font-14 grey">
+
+
+                    <table class="table">
+						<!-- <thead>
+							<tr>
+								<th width="50%">Name</th>
+								<th ng-show="uploader.isHTML5">Size</th>
+								<th ng-show="uploader.isHTML5">Progress</th>
+								<th>Status</th>
+								<th>Actions</th>
+							</tr>
+						</thead> -->
+						<tbody>
+							<tr ng-repeat="item in uploader.queue ">
+								<td class="text-left" width="20%">
+									
+									<!-- Image preview -->
+									<!--auto height-->
+									<!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+									<!--auto width-->
+									<div ng-show="uploader.isHTML5" ng-thumb="{ file: item._file, height: 70, width: 70 }"></div>
+									<!--fixed width and height -->
+									<!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+								</td>
+								<td class="text-left font-14" width="20%">
+									<small>{{ item.file.name }}</samll>
+								</td>
+								<td class="text-left font-14" width="10%" ng-show="uploader.isHTML5" nowrap><small>{{ item.file.size/1024/1024|number:2 }} MB</small></td>
+								<td class="text-left" width="30%" ng-show="uploader.isHTML5">
+									<div class="progress" style="">
+										<div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+									</div>
+								</td>
+								<!-- <td class="text-center">
+									<span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+									<span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+									<span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+								</td> -->
+								<td class="text-right"  width="20%" nowrap>
+									<button type="button" class="btn btn-success btn-xs addmarginright" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+										<span class="glyphicon glyphicon-upload"></span> Upload
+									</button>
+									<!-- <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+										<span class="glyphicon glyphicon-ban-circle"></span> Cancel
+									</button> -->
+									<button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+										<span class="glyphicon glyphicon-trash"></span> Remove
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+                  </span>
+                </div>
+              </div>
+            </label>
+          </div>
+          
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+                <span class="formlabeltext">First Name:*
+                  <span class="pull-right addmarginright">
+
+                    <div class="tooltipcontainer textNoShadow ignorevisible">
+                      <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                        <figure class="hpux validation" ng-class="{ 'error visible' : userForm.firstname.$invalid && !userForm.firstname.$pristine , 'success visible' : userForm.firstname.$valid }"></figure>
+                      </a>
+                    </div>
+
+                  </span>
+                </span>
+                <span class="formlabelinput" ng-class="{ 'errorInput' : userForm.firstname.$invalid && !userForm.firstname.$pristine }">
+                    <input class="formlabelplace" type="text" name="firstname" class="form-control" ng-model="user.firstname" required>
+                </span>
+            </label>
+          </div>
+                 
+          <div class="clear"></div>
+
+          <label class="formlabel">
+            <span class="formlabeltextError">&nbsp;</span>
+            <div class="mediaformcontainer">
+              <div class="media">
+                <div class="help-block" ng-show="userForm.firstname.$invalid && !userForm.firstname.$pristine">
+                  <p class="alert alert-info">First name is required!</p>
+                </div>
+              </div>
+            </div>
+          </label>
+              
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+                <span class="formlabeltext">Last Name:*
+                  <span class="pull-right addmarginright">
+                    <div class="tooltipcontainer textNoShadow ">
+                      <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                        <figure class="hpux validation ignorevisible" ng-class="{ 'error visible' : userForm.lastname.$invalid && !userForm.lastname.$pristine , 'success visible' : userForm.lastname.$valid }"></figure>
+                      </a>
+                    </div>
+                  </span>
+                </span>
+                <span class="formlabelinput" ng-class="{ 'errorInput' : userForm.lastname.$invalid && !userForm.lastname.$pristine }">
+                    <input class="formlabelplace" type="text" name="lastname" class="form-control" ng-model="user.lastname" required>
+                </span>
+            </label>
+          </div>
+                 
+          <div class="clear"></div>
+
+          <label class="formlabel">
+            <span class="formlabeltextError">&nbsp;</span>
+            <div class="mediaformcontainer">
+              <div class="media">
+                <div class="help-block" ng-show="userForm.lastname.$invalid && !userForm.lastname.$pristine">
+                  <p class="alert alert-info">Last name is required!</p>
+                </div>
+              </div>
+            </div>
+          </label>
+              
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+                <span class="formlabeltext">Email:*
+                  <span class="pull-right addmarginright">
+                    
+                    <div class="tooltipcontainer textNoShadow ">
+                      <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                        <figure class="hpux validation ignorevisible" ng-class="{ 'error visible' : userForm.email.$invalid && !userForm.email.$pristine , 'success visible' : userForm.email.$valid && !userForm.email.$pristine }"></figure>
+                      </a>
+                    </div>
+
+                  </span>
+                </span>
+                <span class="formlabelinput" ng-class="{ 'errorInput' : userForm.email.$invalid && !userForm.email.$pristine }">
+                    <input type="email" name="email" class="formlabelplace" ng-model="user.email">
+
+                </span>
+            </label>
+          </div>
+                 
+          <div class="clear"></div>
+
+          <label class="formlabel">
+            <span class="formlabeltextError">&nbsp;</span>
+            <div class="mediaformcontainer">
+              <div class="media">
+                <div class="help-block" ng-show="userForm.email.$invalid && !userForm.email.$pristine">
+                  <p class="alert alert-info">Enter a valid email.</p>
+                </div>
+              </div>
+            </div>
+          </label>
+              
+          <div class="clear"></div>
+
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+                <span class="formlabeltext">Password:*
+                  <span class="pull-right addmarginright">
+                    
+                    <div class="tooltipcontainer textNoShadow ">
+                      <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                        <figure class="hpux validation ignorevisible" ng-class="{ 'error visible' : userForm.pass.$invalid && !userForm.pass.$pristine , 'success visible' : userForm.pass.$valid && !userForm.pass.$pristine }"></figure>
+                      </a>
+                    </div>
+
+                  </span>
+                </span>
+                <span class="formlabelinput" ng-class="{ 'errorInput' : userForm.pass.$invalid && !userForm.pass.$pristine }">
+                    <input type="password" name="pass" class="formlabelplace" ng-model="user.pass" ng-minlength="6" ng-maxlength="20">
+
+                </span>
+            </label>
+          </div>
+                 
+          <div class="clear"></div>
+
+          <label class="formlabel">
+            <span class="formlabeltextError">&nbsp;</span>
+            <div class="mediaformcontainer">
+              <div class="media">
+                <div class="help-block" ng-show="userForm.pass.$error.minlength">
+                  <p class="alert alert-info">Username is too short.</p>
+                </div>
+                <div class="help-block" ng-show="userForm.pass.$error.maxlength">
+                  <p class="alert alert-info">Username is too long.</p>
+                </div>
+              </div>
+            </div>
+          </label>
+              
+          <div class="clear"></div>
+
+			
+			
+			
+			<div class="clear"></div>
+
+			<div class="formfieldcontainer">
+            	<label class="formlabel">
+              		<span class="formlabeltext">Challenge Question:*
+                		<span class="pull-right addmarginright">
+                  			<div class="tooltipcontainer textNoShadow">
+                    			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      				<figure class="hpux validation success"></figure>
+                    			</a>
+                  			</div>
+                		</span>
+              		</span>
+              		<span class="formlabelinput ignorepadding">
+                		<select class="search_selection_options_withoutsearch">
+                  			<option value="Favourite place">What is your favourite place?</option>
+                  			<option value="Favourite food">What is your favourite food?</option>
+                  			<option value="Born">Where were you born?</option>
+                		</select>
+              		</span>
+            	</label>
+          	</div>
+             
+          	<div class="clear"></div>
+
+          	<div class="formfieldcontainer">
+            	<label class="formlabel">
+              		<span class="formlabeltext">Your Answer:*
+                		<span class="pull-right addmarginright">
+                  			<div class="tooltipcontainer textNoShadow">
+                    			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      				<figure class="hpux validation success"></figure>
+                    			</a>
+                  			</div>
+                		</span>
+              		</span>
+              		<span class="formlabelinput">
+                		<input class="formlabelplace" placeholder="Please type question answer here">
+              		</span>
+            	</label>
+          	</div>
+             
+          	<div class="clear"></div>
+
+			<div class="formfieldcontainer">
+          		<label class="formlabel">
+            		<span class="checkboxwrapper">
+              			<input id="terms" type="checkbox">
+                			<label for="terms">
+                  				<span class="addpaddingleft"></span>
+                					I have read and accept the
+                			</label>
+            				<span class="checkboxtext"><a href="javascript:;">Terms of Service</a></span>
+            				<span class="pull-right addmarginbottom">
+              					<p><small>What is an <a href="#webID" data-toggle="modal">HP Web ID?</a></small></p>
+            				</span>
+            		</span>
+          		</label>
+        	</div>
+
+        	<div class="clear"></div>
+
+        	<div class="formfooter">
+          		<span class="displayinlineblock addmargin grey addpaddingtop">
+            		<p><a href="001a.html">Sign up </a>as a Company User</p>
+          		</span>
+          		<div class="footertext buttonwrapper ignoremarginleftright">
+            		<button class="secondarybutton addmarginright">Cancel </button>
+            		<button class="primarybutton">Submit </button>
+          		</div>
+        	</div>
+
+        	<div class="clear"></div>
+
+          </form>
+
+		</div>
+	</div>
+</section>
+
+<!-- SCRIPTING (ALWAYS PUT AT THE END FOR FASTER LOADING OF PAGE)
+==================================================================== -->
+ 
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="js/code.js"></script>
+<script src="js/datepicker.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/popover.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/scrollspy.js"></script>
+<script src="js/stickyscrollspy.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/dropdownheader.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/customselect.js"></script>
+<script src="js/multiselect.js"></script>
+<script src="js/multilevelselect.js"></script>
+<script src="js/imagesselectoption.js"></script>
+<script src="js/section.js"></script>
+<script src="js/jquery.sortElements.js"></script>
+<script src="js/stickyheading.js"></script>
+<script src="js/overlay.js"></script>
+<script src="js/backgroundfocus.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/ie.js"></script>
+<script src="js/localscroll.js"></script>
+<script src="js/scrollTo-min.js"></script>
+<script src="js/imageslider.js"></script>
+<script src="js/prettify.js"></script>
+ 
+<!-- END SCRIPTING
+================================================== -->
+
+
+</body>
+</html>

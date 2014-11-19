@@ -1,0 +1,701 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+<title>Account Management</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="img/favicon.ico">
+ 
+<!-- Le HTML5 shim, for IE6-8 supporting of HTML5 elements -->
+ 
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/iehtml5elements.js"></script>
+<![endif]-->
+ 
+</head>
+ 
+<body>
+ 
+<!-- ================================================== CONTAINER ================================================== -->
+<!--Insert Code below-->
+<section>
+    <div class="constrainedwidth">
+	    <div class="spacerhead firstchild lastchild">
+	      	<div class="panel">Company Products</div>
+	    </div>
+    </div>
+</section>
+  
+<div class="clear"></div>
+
+<section>
+    <div class="constrainedwidth">
+	    <div class="spacer firstchild lastchild">
+	       
+	       	<ul class="nav nav-tabs" data-tabs="tabs">
+				<li class="active"><a class="textcolor" href="#company" data-toggle="tab">Company Products</a></li>
+				<li><a class="textcolor" href="#my" data-toggle="tab">My Products</a></li>
+				<li><a class="textcolor" href="#updates" data-toggle="tab">Updates</a></li>
+			</ul>
+			<!-- Begin Tabs -->
+			<div class="tab-content">
+				<!-- Tab 1 -->
+				<div class="tab-pane active" id="company">
+
+					<section>
+						<div class="gridonethird">
+							<div class="spacer firstchild ignoreborder ignorepadding">
+
+								<div class="btn-group">
+          							<button type="button" class="btn btn-default btn-action">
+            							<span class="checkboxwrapper ZeroLineHeight">
+                  							<input type="checkbox" id="invitesAll">
+                    							<label for="invitesAll">
+                      								<span class="addpaddingleft"></span>
+                    							</label>
+                						</span>
+          							</button>
+          							<button type="button" class="btn btn-default dropdown-toggle btn-action" data-toggle="dropdown">
+            							<figure class="hpux gray dropdown-caret down ignoremargin"></figure>
+            							<span class="sr-only">Toggle Dropdown</span>
+          							</button>
+          							<ul class="dropdown-menu-2 dropdown-menuRighty" role="menu">
+            							<li><a href="#">Resend invitation to selected items</a></li>
+              							<li><a href="#">Delete all selected items</a></li>
+          								</ul>
+        						</div>
+        						<div class="pagination ignoremargin pull-right">
+								  	<ul>
+								    	<li>
+								      		<a>
+									        	<span class="paginationiconwrapper previous_icon"></span>
+									      	</a>
+								    	</li>
+								    	<li>
+								      		<a>
+								        		<span class="pagination_icon_container pagination_number_container"> 1 </span>
+								      		</a>
+								    	</li>
+								     	<li>
+								      		<a>
+								        		<span class="pagination_icon_container pagination_number_container"> 2 </span>
+								      		</a>
+								    	</li>
+								      	<li>
+								      		<a>
+								        	<span class="paginationiconwrapper next_icon"></span>
+								      		</a>
+								    	</li>
+								  	</ul>
+								</div>
+
+							</div>
+						</div>
+						<div class="gridtwothirds">
+							<div class="spacer lastchild ignoreborder ignorepadding">
+
+								<div class="formfieldcontainer displayblock pull-right">
+            						<span class="formlabelsearch">
+                						<div class="btn-group">
+                  							<a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    							<figure class="hpux gray filter ignoremargin addmarginTenTop"></figure>
+                  							</a>
+                  							<ul class="dropdown-menu" role="menu">
+								    			<li><a href="#">All Type Apps</a></li>
+												<li><a href="#">One Time Apps</a></li>
+												<li><a href="#">Subscription</a></li>
+											</ul>
+										</div>
+              						</span>
+									<div class="search_wrapper"> 
+										<input placeholder="Search"> 
+											<span></span> 
+									</div>
+      								<div class="clear"></div>
+  								</div>
+
+							</div>
+						</div>
+					</section>
+					<div class="clear"></div>
+					<section>
+						<div class="spacer firstchild lastchild ignoreborder ignorepadding">
+							<table class="basictable">
+					          	<thead>
+					            	<tr>
+						                <th class="text-left"> </th>
+						                <th class="sorttable text-left">Product Info<span class="sorticon"></span></th>
+						                <th class="sorttable text-left">Type<span class="sorticon"></span></th>
+						                <th class="sorttable text-left">Quantity<span class="sorticon"></span></th>
+						                <th class="sorttable text-left">Status<span class="sorticon"></span></th>
+						                <th class="text-right addpaddingright">Action</th>
+					            	</tr>
+					          	</thead>
+					          	<tbody>
+					            	<tr>
+						              	<td class="text-left">
+						                	<span class="checkboxwrapper">
+						                  		<input type="checkbox" id="terms">
+						                    		<label for="terms">
+						                      			<span class="addpaddingleft"></span>
+						                    		</label>
+						                	</span>
+						              	</td>
+					              		<td class="text-left">{product}</td>
+					              		<td class="text-left">{version}</td>
+					              		<td class="text-left">{type}</td>
+					              		<td class="text-left">{price}</td>
+					              		<td class="text-right addpaddingright">
+					                		<div class="btn-group">
+					                  			<button type="button" class="btn btn-action dropdown-toggle" data-toggle="dropdown">
+					                    			<figure class="hpux gray dropdown-caret down ignoremargin addmargin"></figure>
+					                  			</button>
+					                    		<ul class="dropdown-menu" role="menu">
+					                      			<li><a href="#deleteApp" data-dismiss="modal" data-toggle="modal">Delete Application</a></li>
+													<li><a href="#">Download Application</a></li>
+					                      			<li><a href="#editSubscription" data-dismiss="modal" data-toggle="modal">Edit My Subscription</a></li>
+					                      			<li><a href="#cancelSubscription" data-dismiss="modal" data-toggle="modal">Cancel My Subscription</a></li>
+					                    		</ul>
+					                  		</div>
+					                	</td>
+					            	</tr>
+					          	</tbody>
+					        </table>
+    					</div>
+					</section>
+
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+				</div>
+				<!-- END Tab 1 -->
+				<!-- Tab 2 -->
+				<div class="tab-pane" id="my">
+					
+					<section>
+						<div class="gridonethird">
+							<div class="spacer firstchild ignoreborder ignorepadding">
+
+								<div class="btn-group">
+          							<button type="button" class="btn btn-default btn-action">
+            							<span class="checkboxwrapper ZeroLineHeight">
+                  							<input type="checkbox" id="invitesAll">
+                    							<label for="invitesAll">
+                      								<span class="addpaddingleft"></span>
+                    							</label>
+                						</span>
+          							</button>
+          							<button type="button" class="btn btn-default dropdown-toggle btn-action" data-toggle="dropdown">
+            							<figure class="hpux gray dropdown-caret down ignoremargin"></figure>
+            							<span class="sr-only">Toggle Dropdown</span>
+          							</button>
+          							<ul class="dropdown-menu-2 dropdown-menuRighty" role="menu">
+            							<li><a href="#">Resend invitation to selected items</a></li>
+              							<li><a href="#">Delete all selected items</a></li>
+          								</ul>
+        						</div>
+        						<div class="pagination ignoremargin pull-right">
+								  	<ul>
+								    	<li>
+								      		<a>
+									        	<span class="paginationiconwrapper previous_icon"></span>
+									      	</a>
+								    	</li>
+								    	<li>
+								      		<a>
+								        		<span class="pagination_icon_container pagination_number_container"> 1 </span>
+								      		</a>
+								    	</li>
+								     	<li>
+								      		<a>
+								        		<span class="pagination_icon_container pagination_number_container"> 2 </span>
+								      		</a>
+								    	</li>
+								      	<li>
+								      		<a>
+								        	<span class="paginationiconwrapper next_icon"></span>
+								      		</a>
+								    	</li>
+								  	</ul>
+								</div>
+
+							</div>
+						</div>
+						<div class="gridtwothirds">
+							<div class="spacer lastchild ignoreborder ignorepadding">
+
+								<div class="formfieldcontainer displayblock pull-right">
+            						<span class="formlabelsearch">
+                						<div class="btn-group">
+                  							<a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    							<figure class="hpux gray filter ignoremargin addmarginTenTop"></figure>
+                  							</a>
+                  							<ul class="dropdown-menu" role="menu">
+								    			<li><a href="#">All Type Apps</a></li>
+												<li><a href="#">One Time Apps</a></li>
+												<li><a href="#">Subscription</a></li>
+											</ul>
+										</div>
+              						</span>
+									<div class="search_wrapper"> 
+										<input placeholder="Search"> 
+											<span></span> 
+									</div>
+      								<div class="clear"></div>
+  								</div>
+
+							</div>
+						</div>
+					</section>
+					<div class="clear"></div>
+					<section>
+						<div class="spacer firstchild lastchild ignoreborder ignorepadding">
+							<table class="basictable">
+					          	<thead>
+					            	<tr>
+						                <th class="text-left"> </th>
+						                <th class="sorttable text-left">Product Info<span class="sorticon"></span></th>
+						                <th class="sorttable text-left">Type<span class="sorticon"></span></th>
+						                <th class="sorttable text-left">Quantity<span class="sorticon"></span></th>
+						                <th class="sorttable text-left">Status<span class="sorticon"></span></th>
+						                <th class="text-right addpaddingright">Action</th>
+					            	</tr>
+					          	</thead>
+					          	<tbody>
+					            	<tr>
+						              	<td class="text-left">
+						                	<span class="checkboxwrapper">
+						                  		<input type="checkbox" id="terms">
+						                    		<label for="terms">
+						                      			<span class="addpaddingleft"></span>
+						                    		</label>
+						                	</span>
+						              	</td>
+					              		<td class="text-left">{product}</td>
+					              		<td class="text-left">{version}</td>
+					              		<td class="text-left">{type}</td>
+					              		<td class="text-left">{price}</td>
+					              		<td class="text-right addpaddingright">
+					                		<div class="btn-group">
+					                  			<button type="button" class="btn btn-action dropdown-toggle" data-toggle="dropdown">
+					                    			<figure class="hpux gray dropdown-caret down ignoremargin addmargin"></figure>
+					                  			</button>
+					                    		<ul class="dropdown-menu" role="menu">
+					                      			<li><a href="#deleteApp" data-dismiss="modal" data-toggle="modal">Delete Application</a></li>
+													<li><a href="#">Download Application</a></li>
+					                      			<li><a href="#editSubscription" data-dismiss="modal" data-toggle="modal">Edit My Subscription</a></li>
+					                      			<li><a href="#cancelSubscription" data-dismiss="modal" data-toggle="modal">Cancel My Subscription</a></li>
+					                    		</ul>
+					                  		</div>
+					                	</td>
+					            	</tr>
+					          	</tbody>
+					        </table>
+    					</div>
+					</section>
+
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+				</div>
+				<!-- END Tab 2 -->
+				<!-- Tab 3 -->
+				<div class="tab-pane" id="updates">
+					
+					<section>
+						<div class="constrainedwidth">
+							<div class="spacer firstchild lastchild ignoreborder ignorepadding">
+								<div class="formfieldcontainer displayblock pull-right">
+            							<span class="formlabelsearch">
+                							<div class="btn-group">
+                  								<a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    								<figure class="hpux gray filter ignoremargin addmarginTenTop"></figure>
+                  								</a>
+                  								<ul class="dropdown-menu" role="menu">
+								                    <li><a href="#">All Type Apps</a></li>
+								                    <li><a href="#">One Time Apps</a></li>
+								                    <li><a href="#">Subscription</a></li>
+                  								</ul>
+                							</div>
+              							</span>
+
+              							<div class="search_wrapper"> 
+								        	<input placeholder="Search" /> 
+								        		<span></span> 
+      									</div>
+      									
+      									<div class="clear"></div>
+  							</div>
+						</div>
+					</section>
+					<section>
+						<div class="constrainedwidth">
+							<div class="spacer firstchild lastchild ignoreborder ignorepadding">
+
+								<table class="basictable">
+						          	<thead>
+						            	<tr>
+						                	<th class="text-left"> </th>
+							                <th class="sorttable text-left">Product Name<span class="sorticon"></span></th>
+							                <th class="sorttable text-left">Version<span class="sorticon"></span></th>
+							                <th class="sorttable text-left">Published Date<span class="sorticon"></span></th>
+							                <th class="sorttable text-left">Type<span class="sorticon"></span></th>
+							                <th class="sorttable text-left">Price<span class="sorticon"></span></th>
+							                <th class="text-left">Action</th>
+						            	</tr>
+						          	</thead>
+						          	<tbody>
+						            	<tr>
+						              		<td class="text-left">
+							                	<span class="checkboxwrapper">
+							                  	<input type="checkbox" id="terms">
+							                    	<label for="terms">
+							                      	<span class="addpaddingleft"></span>
+							                    	</label>
+							                	</span>
+						              		</td>
+							              	<td class="text-left">{product}</td>
+							              	<td class="text-left">{version}</td>
+							              	<td class="text-left">{publishedDate}</td>
+							              	<td class="text-left">{type}</td>
+							              	<td class="text-left">{price}</td>
+							              	<td class="text-left">
+						                		<button type="button" class="btn btn-action dropdown-toggle" data-toggle="dropdown"> Update </button>
+						              		</td>
+						            	</tr> 
+						            	<tr>
+						              		<td class="text-left">
+						                		<span class="checkboxwrapper">
+						                  			<input type="checkbox" id="terms">
+						                    			<label for="terms">
+						                      				<span class="addpaddingleft"></span>
+						                    			</label>
+						                		</span>
+						              		</td>
+						              		<td class="text-left">{product}</td>
+						              		<td class="text-left">{version}</td>
+						              		<td class="text-left">{publishedDate}</td>
+						              		<td class="text-left">{type}</td>
+						              		<td class="text-left">{price}</td>
+						              		<td class="text-left">
+						                		<div class="progress">
+						                  			<div class="progress-bar textNoShadow" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+						                		</div>
+						                  	</td>
+						            	</tr>  
+						          	</tbody>
+						        </table>
+
+        					<hr>
+        					<p class="grey pull-left">{total-orders} Total Orders</p>
+        					<button class="primarybutton addmarginright pull-right"> Update All </button>
+
+							</div>
+						</div>
+					</section>
+
+				</div>
+				<!-- END Tab 3 -->
+			</div>
+
+	    </div>
+    </div>
+</section>
+  
+<div class="clear"></div>
+
+<!-- Footer -->
+<section>
+	<div class="constrainedwidth">
+		<a href="005.html">prev</a> | <a href="007.html">next</a>
+	</div>
+</section>
+<!-- END Footer -->
+
+ 
+<!--Insert Code above-->
+<!-- ================================================== END CONTAINER ================================================== -->
+
+<!-- ====================================================== Modals ====================================================== -->
+<!-- delete user -->
+	<div class="modal modalstandard fade" id="deleteApp">
+		<div class="modal-dialog">
+			<div class="modalcontainer">
+				<div class="modalheader">
+					<a href="javascript:;" class="modallogocontainer">
+						<span class="modallogotext"> Delete Application </span>
+					</a>
+				</div>
+				<div class="modalcontentwrapper maxcontentheight">
+					<div class="modalcontent">
+						<p>This app is being used by: [Device 1], [Device 2], [Device 3]</p>
+						<p>By deleting, this app will be removed from all or this device(s)</p>
+					</div>
+					<div class="modalfooter">
+						<div class="footertext buttonwrapper">
+							<button class="secondarybutton" data-dismiss="modal">Cancel </button>
+							<button class="primarybutton addmarginright">Yes </button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- End Modal -->
+<!-- Modal Edit Subscription -->
+  <div class="modal modalstandard fade" id="editSubscription">
+    <div class="modal-dialog modal-mega">
+      <div class="modalcontainer">
+        <div class="modalheader">
+          <a href="javascript:;" class="modallogocontainer">
+            <span class="modallogotext"> Edit My Subscription </span>
+          </a>
+            
+        </div>
+        <div class="modalcontent maxcontentheight">
+                
+                <section>
+					<div class="constrainedwidth">
+						<div class="gridonehalf">
+							<div class="spacer firstchild ignoreborder">
+								<table class="accntmanage_table profileTable">
+				                  	<tbody>
+				                    	<tr>
+				                      		<td>Order No.:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Item Name:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Purchase Date:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                  	</tbody>
+				                </table>
+            				</div>
+						</div>
+						<div class="gridonehalf">
+							<div class="spacer lastchild ignoreborder">
+								<table class="accntmanage_table profileTable">
+				                  	<tbody>
+				                    	<tr>
+				                      		<td class="text-right">Subtotal:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td class="text-right">Tax:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td class="text-right">Total:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                  	</tbody>
+			                	</table>
+			            	</div>
+						</div>
+					</div>
+				</section>
+				
+				<div class="clear"></div>
+
+               	<div class="formfieldcontainer">
+					<label class="formlabel">
+						<span class="formlabeltext">Payment Method:</span>
+						<div class="gridonethird">
+							<span class="formlabelinput imageinputcontainer ignorepadding">
+								<select name="imagesinputwrapper" class="imagesinputwrapper" tabindex="15">
+									<option value="amex" data-image="css/images/creditcards/americanexpress.png"></option>
+									<option value="Discover" data-image="css/images/creditcards/discovercard.png"></option>
+									<option value="Mastercard" data-image="css/images/creditcards/mastercard.png"></option>
+									<option value="Visa" data-image="css/images/creditcards/visacard.png"></option>
+									<option value="Paypal" data-image="css/images/creditcards/paypal.png"></option>
+								</select>
+							</span>
+						</div>
+						<div class="gridonethird">
+							<span class="addmarginleftright font-14"> | <a href="#">Edit</a><span class="addmarginleftright"></span><a href="#">Add</a></span>
+						</div>
+					</label>
+				</div>
+					 
+				<div class="clear"></div>
+
+				<div class="formfieldcontainer">
+					<label class="formlabel">
+						<span class="formlabeltext">Type:</span>
+						<span class="font-14">Subscription Charge</span>
+					</label>
+				</div>
+				
+				<div class="clear"></div>
+
+				<div class="formfieldcontainer">
+					<label class="formlabel">
+						<span class="formlabeltext">Purchase Option:</span>
+						<div class="gridonethird">
+							<span class="formlabelinput ignorepadding">
+								<select class="search_selection_options_withoutsearch">
+									<option value=" ">None</option>
+									<option value=" ">Subscription ($5.00 / mnth)</option>
+									<option value=" ">Subscription ($19.00 / yr)</option>
+								</select>
+							</span>
+						</div>
+						<div class="gridonethird">
+							<span class="addmarginleftright font-14"> | <a href="#">Cancel Subscription</a></span>
+						</div>
+					</label>
+				</div>
+
+				<div class="clear"></div>
+
+                <p class="grey">Please click <a href="#cancelSubscription" data-dismiss="modal" data-toggle="modal">here</a> to review the cancellation policy.</p>
+
+        </div>
+        <div class="modalfooter">
+          <div class="footertext buttonwrapper">
+            <button class="secondarybutton addmarginright" data-dismiss="modal">Cancel </button>
+            <button class="primarybutton">Save </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END Modal -->
+
+<!-- Modal cancel subscription -->
+  <div class="modal modalstandard fade" id="cancelSubscription">
+    <div class="modal-dialog">
+      <div class="modalcontainer">
+        <div class="modalheader">
+          <a href="javascript:;" class="modallogocontainer">
+            <span class="modallogotext"> Cancel Subscription </span>
+          </a>
+           
+        </div>
+        <div class="modalcontent maxcontentheight">
+          <p class="text-center grey">Are you about to cancel the subscription order shown below</p>
+                <section>
+					<div class="constrainedwidth">
+						<div class="gridonehalf">
+							<div class="spacer firstchild ignoreborder">
+								<table class="accntmanage_table profileTable">
+				                  	<tbody>
+				                    	<tr>
+				                      		<td>Order No.:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Item Name:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Purchase Date:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Payment Method:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Type:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Bill Expired Date:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td>Current Term Ends:</td>
+				                      		<td>NA</td>
+				                    	</tr>
+				                  	</tbody>
+				                </table>
+            				</div>
+						</div>
+						<div class="gridonehalf">
+							<div class="spacer lastchild ignoreborder">
+								<table class="accntmanage_table profileTable">
+				                  	<tbody>
+				                    	<tr>
+				                      		<td class="text-right">Subtotal:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td class="text-right">Tax:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                    	<tr>
+				                      		<td class="text-right">Total:</td>
+				                      		<td class="text-right">NA</td>
+				                    	</tr>
+				                  	</tbody>
+			                	</table>
+			            	</div>
+						</div>
+					</div>
+				</section>
+
+                <div class="clear"></div>
+
+                <p class="grey">To review the cancellation policy, click <a href="#">here</a>.</p>
+
+        </div>
+        <div class="modalfooter">
+          <div class="footertext buttonwrapper">
+            <button class="secondarybutton addmarginright" data-dismiss="modal">No </button>
+            <button class="primarybutton">Yes </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END Modal -->
+<!-- ====================================================== END Modals ====================================================== -->
+ 
+<!-- SCRIPTING (ALWAYS PUT AT THE END FOR FASTER LOADING OF PAGE)
+==================================================================== -->
+ 
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="js/code.js"></script>
+<script src="js/datepicker.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/popover.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/scrollspy.js"></script>
+<script src="js/stickyscrollspy.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/dropdownheader.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/customselect.js"></script>
+<script src="js/multiselect.js"></script>
+<script src="js/multilevelselect.js"></script>
+<script src="js/imagesselectoption.js"></script>
+<script src="js/section.js"></script>
+<script src="js/jquery.sortElements.js"></script>
+<script src="js/stickyheading.js"></script>
+<script src="js/overlay.js"></script>
+<script src="js/backgroundfocus.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/ie.js"></script>
+<script src="js/localscroll.js"></script>
+<script src="js/scrollTo-min.js"></script>
+<script src="js/imageslider.js"></script>
+<script src="js/prettify.js"></script>
+ 
+<!-- END SCRIPTING
+================================================== -->
+</body>
+</html>

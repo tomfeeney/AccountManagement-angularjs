@@ -1,0 +1,29 @@
+           
+<!-- STANDARD MODAL TEMPLATE -->
+
+<div class="modalcontainer">
+  <div class="modalheader">
+    <a href="javascript:;" class="modallogocontainer">
+      <span class="modallogotext"> Modal Title </span>
+    </a>
+    <ul class="modalmainnavright popovercontainer" ng-controller="AngularPopoverController">
+      <li><a class="modal-helpicon" popover-placement="left" popover="{{dynamicPopovercontent}}"><span></span></a></li>
+    </ul>
+  </div>
+
+  <div class="modalcontentwrapper maxcontentheight">
+    <div class="modalcontent">
+      <h3 class="ignoremargin">Sub title</h3>
+      <p class="grey">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    </div>
+  </div>
+  <div class="modalfooter"> 
+    <div class="footertext buttonwrapper">
+      <button class="secondarybutton" ng-click="cancel()">Close </button>
+    </div>
+  </div>
+</div>  
+
+<!-- END STANDARD MODAL TEMPLATE -->
+
+

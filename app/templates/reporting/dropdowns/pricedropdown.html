@@ -1,0 +1,15 @@
+<!-- PRICE DROPDOWN TEMPLATE -->
+
+<div class="gridonequarter addmarginbottom">
+	<div class="addpaddingright firstchild ignoreboxshadow grey">
+	    <span class="formlabeltext">Price</span>
+	    <ui-select class="autoheight addbordergrey pull-left"  ng-model="price.selected" theme="selectize" ng-disabled="disabled">
+	      <match placeholder="Select price">{{$select.selected.name}}</match>
+	      <choices repeat="price in filterpriceOptions.stores | filter: $select.search">
+	        <span ng-bind-html="price.name | highlight: $select.search"></span>
+	      </choices>
+	    </ui-select>
+	</div>
+</div>  
+
+<!-- END PRICE DROPDOWN TEMPLATE -->

@@ -1,0 +1,176 @@
+
+
+<!-- LAYOUT HTML -->
+ <div ng-controller="SearchSelectController">
+
+<section>
+  <div class="constrainedwidth">
+    <div class="addpadding whitebg firstchild lastchild autoheight">
+      <section>
+        <div class="constrainedwidth">
+            <h3 class="ignoremargin grey">{{message}}</h3>
+        </div>
+        <!--div class="gridonequarter">
+          <div class="addpaddingright firstchild ignoreboxshadow grey" data-ng-include="templateone.url">
+          </div>
+        </div>
+        <div class="gridonequarter">
+          <div class="addpaddingright ignoreboxshadow grey" data-ng-include="templatetwo.url">
+          </div>
+        </div>
+        <div class="gridonequarter">
+          <div class="addpaddingright ignoreboxshadow grey" data-ng-include="templatethree.url">
+          </div>
+        </div>
+        <div class="gridonequarter">
+          <div class="addpaddingright lastchild ignoreboxshadow grey"></div>
+        </div-->
+
+      </section>
+      <div class="clear"></div>
+    </div>
+  </div>
+</section>
+
+
+<!--div class="ng-scope" ng-controller="TabsController" ng-init="initializetabs()"> 
+  <tabset>
+    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+      {{tab.content}}
+    </tab>
+  </tabset>
+</div
+data-ng-include="templateone.url"-->  
+
+
+  
+  <!--ui-select class="autoheight addbordergrey pull-left"  ng-model="price.selected"  theme="selectize" ng-disabled="disabled">
+    <match placeholder="Select price">{{$select.selected.name}}</match>
+    <choices repeat="price in pricevariations | filter: $select.search">
+      <span ng-bind-html="price.name | highlight: $select.search"></span>
+    </choices>
+  </ui-select-->
+
+
+  <!-- Price:
+    <select ng-model="filterItem.store" ng-options="item.name for item in filterOptions.stores">
+    </select>-->
+  <div class="spacer ignoreboxshadow firstchild lastchild spacer ignorebackground">
+
+    <div class="gridonequarter addmarginbottom">
+      <div class="addpaddingright firstchild ignoreboxshadow grey">
+        <span class="formlabeltext">Time</span>
+        <ui-select class="autoheight addbordergrey pull-left"  ng-model="time.selected" theme="selectize" ng-disabled="disabled">
+          <match placeholder="Select time">{{$select.selected.name}}</match>
+          <choices repeat="time in filtertimeOptions.stores | filter: $select.search">
+            <span ng-bind-html="time.name | highlight: $select.search"></span>
+          </choices>
+        </ui-select>
+      </div>
+    </div>  
+
+    <div class="gridonequarter addmarginbottom">
+      <div class="addpaddingright firstchild ignoreboxshadow grey">
+        <span class="formlabeltext">Region</span>
+        <ui-select class="autoheight addbordergrey pull-left"  ng-model="country.selected" theme="selectize" ng-disabled="disabled">
+          <match placeholder="Select country">{{$select.selected.name}}</match>
+          <choices repeat="country in filtercountryOptions.stores | filter: $select.search">
+            <span ng-bind-html="country.name | highlight: $select.search"></span>
+          </choices>
+        </ui-select>
+      </div>  
+    </div>  
+
+    <div class="gridonequarter addmarginbottom">
+      <div class="addpaddingright firstchild ignoreboxshadow grey">
+        <span class="formlabeltext">Type</span>
+        <ui-select class="autoheight addbordergrey pull-left"  ng-model="type.selected" theme="selectize" ng-disabled="disabled">
+          <match placeholder="Select types">{{$select.selected.name}}</match>
+          <choices repeat="type in filtertypeOptions.stores | filter: $select.search">
+            <span ng-bind-html="type.name | highlight: $select.search"></span>
+          </choices>
+        </ui-select>
+      </div>
+    </div>  
+
+    <div class="gridonequarter addmarginbottom">
+      <div class="addpaddingright firstchild ignoreboxshadow grey">
+        <span class="formlabeltext">Price</span>
+        <ui-select class="autoheight addbordergrey pull-left"  ng-model="price.selected" theme="selectize" ng-disabled="disabled">
+          <match placeholder="Select price">{{$select.selected.name}}</match>
+          <choices repeat="price in filterpriceOptions.stores | filter: $select.search">
+            <span ng-bind-html="price.name | highlight: $select.search"></span>
+          </choices>
+        </ui-select>
+      </div>
+    </div>  
+  </div>  
+
+
+    <!--table ng-table="tablePagination" class="basictable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Author</th>
+          <th>Sales</th>
+          <th class="sorttable" ng-click="orderByField='revenue'; reverseSort = !reverseSort">Revenue<span class="sorticon"></span></th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-ng-repeat="item in data | orderBy:orderByField:reverseSort| filter:customFilter | filter:query" >
+          <td>{{item.item}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.author}}</td>
+          <td>{{item.sales}}</td>
+          <td>{{item.revenue}}</td>
+        </tr>
+      </tbody>
+    </table-->
+
+    <div class="search_selection-search pull-right autowidth addmarginbottom"> <input class="search_selection-input addthreeborderradius" placeholder="Search" ng-model="query" /> <span></span>   </div>
+
+                    
+    <table ng-table="tablePagination" class="basictable">
+     <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Author</th>
+          <th>Sales</th>
+          <th class="sorttable" ng-click="orderByField='revenue'; reverseSort = !reverseSort">Revenue<span class="sorticon"></span></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="user in $data| orderBy:orderByField:reverseSort| filter:custompriceFilter | filter:customtimeFilter | filter:customtypeFilter | filter:customcountryFilter | filter:query">
+          <td data-title="'item'">{{user.item}}</td>
+          <td data-title="'price'">{{user.price}}</td>
+          <td data-title="'author'">{{user.author}}</td>
+          <td data-title="'sales'">{{user.sales}}</td>
+          <td data-title="'revenue'">{{user.revenue}}</td>
+        </tr>
+      <tbody>
+    </table>
+
+    <!--select class="form-control" ng-init="cc={item: ''}" ng-model="cc.revenue">
+       <option ng-repeat="revenue in data" value="{{revenue.revenue}}">{{revenue.revenue}}</option>
+    </select>
+    <div ng-repeat="revenue in data| filter:cc">
+        {{revenue.item}}
+    </div-->
+
+   <!--select class="form-control" ng-model="price.name">
+         <option ng-repeat="name in pricevariations" value="{{name.name}}">{{name.name}}</option>
+    </select-->
+   <!---div ng-repeat="name in pricevariations| filter:price">
+                {{name.author}} {{name.price}}
+    </div-->
+    <!--smart-table class="basictable" table-title="Smart Table example" columns="columnCollection"
+    rows="rowCollection" config="globalConfig">     
+    </smart-table-->
+  </div>
+
+
+<!-- END LAYOUT HTML -->

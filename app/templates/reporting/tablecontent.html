@@ -1,0 +1,26 @@
+<div google-chart chart="chartObject" style="{{cssStyle}}"></div>
+
+  <div class="search_selection-search pull-right autowidth addmarginbottom"> <input class="search_selection-input addthreeborderradius" placeholder="Search" ng-model="query" /> <span></span>   </div>
+  <div class="clear"></div>
+                    
+  <table ng-table="tablePagination" class="basictable">
+   <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Author</th>
+        <th>Sales</th>
+        <th class="sorttable" ng-click="orderByField='revenue'; reverseSort = !reverseSort">Revenue<span class="sorticon"></span></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="user in $data| orderBy:orderByField:reverseSort| filter:custompriceFilter | filter:customtimeFilter | filter:customtypeFilter | filter:customcountryFilter | filter:query">
+        <td data-title="'item'">{{user.item}}</td>
+        <td data-title="'price'">{{user.price}}</td>
+        <td data-title="'author'">{{user.author}}</td>
+        <td data-title="'sales'">{{user.sales}}</td>
+        <td data-title="'revenue'">{{user.revenue}}</td>
+      </tr>
+    <tbody>
+  </table>

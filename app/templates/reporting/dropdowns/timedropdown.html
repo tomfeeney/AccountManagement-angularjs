@@ -1,0 +1,15 @@
+<!-- TIME DROPDOWN TEMPLATE -->
+
+<div class="gridonequarter addmarginbottom">
+  <div class="addpaddingright firstchild ignoreboxshadow grey">
+    <span class="formlabeltext">Time</span>
+    <ui-select class="autoheight addbordergrey pull-left"  ng-model="time.selected" theme="selectize" ng-disabled="disabled">
+      <match placeholder="Select time">{{$select.selected.name}}</match>
+      <choices repeat="time in filtertimeOptions.stores | filter: $select.search">
+        <span ng-bind-html="time.name | highlight: $select.search"></span>
+      </choices>
+    </ui-select>
+  </div>
+</div>  
+
+<!-- END TIME DROPDOWN TEMPLATE -->

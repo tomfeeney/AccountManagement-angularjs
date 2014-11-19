@@ -1,0 +1,518 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+<title>Account Management</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="img/favicon.ico">
+ 
+<!-- Le HTML5 shim, for IE6-8 supporting of HTML5 elements -->
+ 
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/iehtml5elements.js"></script>
+<![endif]-->
+ 
+</head>
+ 
+<body>
+ 
+<!-- ================================================== CONTAINER ================================================== -->
+<!--Insert Code below-->
+	<section>
+	    <div class="constrainedwidth">
+		    <div class="spacerhead firstchild lastchild">
+	        		<div class="panel">User Managment List</div>
+		    </div>
+	    </div>
+	</section>
+	  
+	<div class="clear"></div>
+
+	<section>
+	    <div class="constrainedwidth">
+		    <div class="spacer firstchild lastchild">
+		    	<section>
+
+		    	<div class="pull-right">
+          			<a data-toggle="modal" href="#inviteUser"><figure class="hpux gray plus ignoremargin displayinlineblock"></figure><span class="addmarginleft">Inivte User (s)</span></a>
+        		</div>
+
+	<div class="clear"></div>
+
+	<hr>
+
+		<div class="constrainedwidth">
+			<div class="gridonethird">
+				<div class="spacer firstchild ignoreborder ignorepadding">
+					<div class="btn-group">
+          				<button type="button" class="btn btn-default btn-action">
+            				<span class="checkboxwrapper ZeroLineHeight">
+                  				<input type="checkbox" id="invitesAll">
+                    				<label for="invitesAll">
+                      					<span class="addpaddingleft"></span>
+                    				</label>
+                			</span>
+          				</button>
+          				<button type="button" class="btn btn-default dropdown-toggle btn-action" data-toggle="dropdown">
+            				<figure class="hpux gray dropdown-caret down ignoremargin"></figure>
+            				<span class="sr-only">Toggle Dropdown</span>
+          				</button>
+          			<ul class="dropdown-menu-2 dropdown-menuRighty" role="menu">
+            			<li><a href="#">Resend invitation to selected items</a></li>
+              			<li><a href="#">Delete all selected items</a></li>
+          			</ul>
+        		</div>
+    		</div>
+			
+			</div>
+			<div class="gridtwothirds">
+				<div class="spacer lastchild ignoreborder ignorepadding">
+					<div class="formfieldcontainer displayblock pull-right">
+            			<span class="formlabelsearch">
+                			<div class="btn-group">
+                  				<a data-toggle="dropdown" class="dropdown-toggle" href="">
+                    				<figure class="hpux gray filter ignoremargin addmarginTenTop"></figure>
+                  				</a>
+                  				<ul role="menu" class="dropdown-menu">
+								    <li><a href="#">All Type Apps</a></li>
+									<li><a href="#">One Time Apps</a></li>
+									<li><a href="#">Subscription</a></li>
+								</ul>
+							</div>
+              			</span>
+						<div class="search_wrapper"> 
+							<input placeholder="Search"> 
+								<span></span> 
+						</div>
+      									
+						<div class="clear"></div>
+  					</div>
+  				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="clear"></div>
+
+		    	<table class="basictable">
+		          	<thead>
+		            	<tr>
+			                <th> </th>
+			                <th class="sorttable text-left">User Name<span class="sorticon"></span></th>
+			                <th class="sorttable text-left">Role<span class="sorticon"></span></th>
+			                <th class="sorttable text-left">Registration Date<span class="sorticon"></span></th>
+			                <th class="sorttable text-left">Status<span class="sorticon"></span></th>
+			                <th class="text-right addpaddingright">Action</th>
+		            	</tr>
+		          	</thead>
+		          	<tbody>
+			            <tr>
+			              	<td class="text-left">
+			                	<span class="checkboxwrapper">
+			                  		<input type="checkbox" id="invitationAll">
+			                    		<label for="terms">
+			                      		<span class="addpaddingleft"></span>
+			                    	</label>
+			                	</span>
+			              	</td>
+				            <td class="text-left">{userName}</td>
+				            <td class="text-left">{userRole}</td>
+				            <td class="text-left">{regDate}</td>
+				            <td class="text-left">{status}</td>
+				            <td class="text-right addpaddingright">
+			                	<div class="btn-group">
+			                  		<button type="button" class="btn btn-action dropdown-toggle" data-toggle="dropdown">
+			                    		<figure class="hpux gray dropdown-caret down ignoremargin addmargin"></figure>
+			                  		</button>
+			                    	<ul class="dropdown-menu" role="menu">
+			                      		<li><a href="#editUser" data-dismiss="modal" data-toggle="modal">Edit User</a></li>
+			                      		<li><a href="#deleteUser" data-dismiss="modal" data-toggle="modal">Delete User</a></li>
+			                      		<li><a href="#invitation" data-dismiss="modal" data-toggle="modal">Resend Invitation</a></li>
+			                    	</ul>
+			                  	</div>
+			                </td>
+			            </tr>
+			            <tr>
+			              	<td class="text-left">
+			                	<span class="checkboxwrapper">
+			                  		<input type="checkbox" id="invitationAll">
+			                    		<label for="terms">
+			                      		<span class="addpaddingleft"></span>
+			                    	</label>
+			                	</span>
+			              	</td>
+				            <td class="text-left">{userName}</td>
+				            <td class="text-left">{userRole}</td>
+				            <td class="text-left">{regDate}</td>
+				            <td class="text-left">{status}</td>
+				            <td class="text-right addpaddingright">
+			                	<div class="btn-group">
+			                  		<button type="button" class="btn btn-action dropdown-toggle" data-toggle="dropdown">
+			                    		<figure class="hpux gray dropdown-caret down ignoremargin addmargin"></figure>
+			                  		</button>
+			                    	<ul class="dropdown-menu" role="menu">
+			                      		<li><a href="#editUser" data-dismiss="modal" data-toggle="modal">Edit User</a></li>
+			                      		<li><a href="#deleteUser" data-dismiss="modal" data-toggle="modal">Delete User</a></li>
+			                      		<li><a href="#invitation" data-dismiss="modal" data-toggle="modal">Resend Invitation</a></li>
+			                    	</ul>
+			                  	</div>
+			                </td>
+			            </tr>   
+		          	</tbody>
+		        </table>
+
+		        <hr>
+		        <p class="grey">{total-orders} Total Orders</p>
+
+		    </div>
+	    </div>
+	</section>
+	  
+	<div class="clear"></div>
+
+<!-- Footer -->
+<section>
+	<div class="constrainedwidth">
+		<a href="004a.html">prev</a> | <a href="006.html">next</a>
+	</div>
+</section>
+<!-- END Footer -->
+
+ 
+<!--Insert Code above-->
+<!-- ================================================== END CONTAINER ================================================== -->
+
+<!-- ====================================================== Modals ====================================================== -->
+<!-- delete user -->
+	<div class="modal modalstandard fade" id="deleteUser">
+		<div class="modal-dialog">
+			<div class="modalcontainer">
+				<div class="modalheader">
+					<a href="javascript:;" class="modallogocontainer">
+						<span class="modallogotext"> Delete User </span>
+					</a>
+				</div>
+				<div class="modalcontentwrapper maxcontentheight">
+					<div class="modalcontent">
+						<p>Are you sure you want to delete "Jane Smith" from User List</p>	
+					</div>
+					<div class="modalfooter">
+						<div class="footertext buttonwrapper">
+							<button class="secondarybutton" data-dismiss="modal">Cancel </button>
+							<button class="primarybutton addmarginright">Yes </button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- End Modal -->
+<!-- Invite User -->
+	<div class="modal overflowscroll fade" id="inviteUser">
+		<div class="modal-dialog">
+			<div class="modalcontainer">
+				<div class="modalheader">
+					<a href="javascript:;" class="modallogocontainer">
+						<span class="modallogotext"> Invite User </span>
+					</a>
+				</div>
+				<div class="modalcontentwrapper">
+					<div class="modalcontent">
+					<!-- Start Form -->
+					<div class="formfieldcontainer formwithvalidation">
+			            <label class="formlabel">
+			              	<span class="formlabeltext">First Name:*</span>
+			              	<div class="mediaformcontainer">
+			                	<div class="media">
+			                  		<span class="pull-right">
+			                    		<div class="tooltipcontainer textNoShadow">
+			                      			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+			                       				<figure class="hpux validation success"></figure>
+			                   				</a>
+			                   			</div>
+			              			</span>
+			             			<div class="media-body">
+			                  			<span class="formlabelinput">
+			                   				<input class="formlabelplace" placeholder="last name">
+			                   			</span>
+		                			</div>
+		                		</div>
+			              		</div>
+			   	        </label>
+			        </div>
+			          
+			        <div class="clear"></div>
+
+			        <div class="formfieldcontainer formwithvalidation">
+			            <label class="formlabel">
+			              	<span class="formlabeltext">First Name:*</span>
+			              	<div class="mediaformcontainer">
+			                	<div class="media">
+			                  		<span class="pull-right">
+			                    		<div class="tooltipcontainer textNoShadow">
+			                      			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+			                       				<figure class="hpux validation success"></figure>
+			                   				</a>
+			                   			</div>
+			              			</span>
+			             			<div class="media-body">
+			                  			<span class="formlabelinput">
+			                   				<input class="formlabelplace" placeholder="last name">
+			                   			</span>
+		                			</div>
+		                		</div>
+			              	</div>
+			   	        </label>
+			        </div>
+			          
+			        <div class="clear"></div>
+
+			        <div class="formfieldcontainer formwithvalidation">
+			            <label class="formlabel">
+			              	<span class="formlabeltext">Email:*</span>
+			              	<div class="mediaformcontainer">
+			                	<div class="media">
+				                  	<span class="pull-right">
+				                    	<div class="tooltipcontainer textNoShadow">
+					                      	<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+					                        	<figure class="hpux validation success"></figure>
+					                      	</a>
+				                    	</div>
+				                  	</span>
+				                 	<div class="media-body">
+				                    	<span class="formlabelinput">
+				                      		<input class="formlabelplace" placeholder="email">
+				                    	</span>
+				                  	</div>
+			                	</div>
+			              	</div>
+			            </label>
+			        </div>
+			          
+			        <div class="clear"></div>
+
+			        <div class="formfieldcontainer">
+						<label class="formlabel">
+							<span class="formlabeltext">Challenge Question</span>
+							<span class="formlabelinput ignorepadding">
+								<select class="search_selection_options_withoutsearch" tabindex="13">
+									<option value="Favourite place">What is your favourite place?</option>
+									<option value="Favourite food">What is your favourite food?</option>
+									<option value="Born">Where were you born?</option>
+								</select>
+							</span>
+						</label>
+					</div>
+						 
+					<div class="clear"></div>
+
+					<div class="formfieldcontainer">
+          				<label class="formlabel">
+            				<span class="formlabeltext">Message</span>
+              				<span class="formlabelinput ignoreborder ignorepadding">
+                				<textarea placeholder="Please type your message here." class="formlabelplace animated" rows="5"></textarea>
+              				</span>
+          				</label>
+        			</div>
+
+				</div>
+			</div>
+			<div class="modalfooter">
+				<div class="footertext buttonwrapper">
+					<button type="button" class="secondarybutton addmarginright" data-dismiss="modal">Close</button>
+					<button type="button" class="primarybutton">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- needed for the fade in -->
+	</div>
+<!-- End Modal -->
+
+<!-- Edit User -->
+	<div class="modal overflowscroll fade" id="editUser">
+		<div class="modal-dialog">
+			<div class="modalcontainer">
+				<div class="modalheader">
+					<a href="javascript:;" class="modallogocontainer">
+						<span class="modallogotext"> Edit User </span>
+					</a>
+				</div>
+				<div class="modalcontentwrapper">
+					<div class="modalcontent">
+					<!-- Start Form -->
+					<div class="formfieldcontainer formwithvalidation">
+			            <label class="formlabel">
+			              	<span class="formlabeltext">First Name:*</span>
+			              	<div class="mediaformcontainer">
+			                	<div class="media">
+			                  		<span class="pull-right">
+			                    		<div class="tooltipcontainer textNoShadow">
+			                      			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+			                       				<figure class="hpux validation success"></figure>
+			                   				</a>
+			                   			</div>
+			              			</span>
+			             			<div class="media-body">
+			                  			<span class="formlabelinput">
+			                   				<input class="formlabelplace" placeholder="last name">
+			                   			</span>
+		                			</div>
+		                		</div>
+			              		</div>
+			   	        </label>
+			        </div>
+			          
+			        <div class="clear"></div>
+
+			        <div class="formfieldcontainer formwithvalidation">
+			            <label class="formlabel">
+			              	<span class="formlabeltext">First Name:*</span>
+			              	<div class="mediaformcontainer">
+			                	<div class="media">
+			                  		<span class="pull-right">
+			                    		<div class="tooltipcontainer textNoShadow">
+			                      			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+			                       				<figure class="hpux validation success"></figure>
+			                   				</a>
+			                   			</div>
+			              			</span>
+			             			<div class="media-body">
+			                  			<span class="formlabelinput">
+			                   				<input class="formlabelplace" placeholder="last name">
+			                   			</span>
+		                			</div>
+		                		</div>
+			              	</div>
+			   	        </label>
+			        </div>
+			          
+			        <div class="clear"></div>
+
+			        <div class="formfieldcontainer formwithvalidation">
+			            <label class="formlabel">
+			              	<span class="formlabeltext">Email:*</span>
+			              	<div class="mediaformcontainer">
+			                	<div class="media">
+				                  	<span class="pull-right">
+				                    	<div class="tooltipcontainer textNoShadow">
+					                      	<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+					                        	<figure class="hpux validation success"></figure>
+					                      	</a>
+				                    	</div>
+				                  	</span>
+				                 	<div class="media-body">
+				                    	<span class="formlabelinput">
+				                      		<input class="formlabelplace" placeholder="email">
+				                    	</span>
+				                  	</div>
+			                	</div>
+			              	</div>
+			            </label>
+			        </div>
+			          
+			        <div class="clear"></div>
+
+			        <div class="formfieldcontainer">
+						<label class="formlabel">
+							<span class="formlabeltext">Challenge Question</span>
+							<span class="formlabelinput ignorepadding">
+								<select class="search_selection_options_withoutsearch" tabindex="13">
+									<option value="Favourite place">What is your favourite place?</option>
+									<option value="Favourite food">What is your favourite food?</option>
+									<option value="Born">Where were you born?</option>
+								</select>
+							</span>
+						</label>
+					</div>
+						 
+					<div class="clear"></div>
+
+					<div class="formfieldcontainer">
+          				<label class="formlabel">
+            				<span class="formlabeltext">Message</span>
+              				<span class="formlabelinput ignoreborder ignorepadding">
+                				<textarea placeholder="Please type your message here." class="formlabelplace animated" rows="5"></textarea>
+              				</span>
+          				</label>
+        			</div>
+
+        			<div class="clear"></div>
+
+        			<div class="formfieldcontainer">
+							<div class="formlabel">
+								<span class="formlabeltext">Send Notification:</span>
+								<div class="gridonethird">
+									<div class="switch-toggle switch-container">
+										<input checked="" name="refreshtokenonoff" id="toggleon" type="radio">
+											<label onclick="" for="toggleon">Yes</label>
+												<input name="refreshtokenonoff" id="toggleoff" type="radio">
+											<label onclick="" for="toggleoff">No</label>
+											<a></a>
+									</div>
+								</div>
+							</div>
+						</div>
+							 
+						<div class="clear"></div>
+
+				</div>
+			</div>
+			<div class="modalfooter">
+				<div class="footertext buttonwrapper">
+					<button type="button" class="secondarybutton addmarginright" data-dismiss="modal">Close</button>
+					<button type="button" class="primarybutton">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- needed for the fade in -->
+	</div>
+<!-- End Modal -->
+<!-- ====================================================== END Modals ====================================================== -->
+ 
+<!-- SCRIPTING (ALWAYS PUT AT THE END FOR FASTER LOADING OF PAGE)
+==================================================================== -->
+ 
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="js/code.js"></script>
+<script src="js/datepicker.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/popover.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/scrollspy.js"></script>
+<script src="js/stickyscrollspy.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/dropdownheader.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/customselect.js"></script>
+<script src="js/multiselect.js"></script>
+<script src="js/multilevelselect.js"></script>
+<script src="js/imagesselectoption.js"></script>
+<script src="js/section.js"></script>
+<script src="js/jquery.sortElements.js"></script>
+<script src="js/stickyheading.js"></script>
+<script src="js/overlay.js"></script>
+<script src="js/backgroundfocus.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/ie.js"></script>
+<script src="js/localscroll.js"></script>
+<script src="js/scrollTo-min.js"></script>
+<script src="js/imageslider.js"></script>
+<script src="js/prettify.js"></script>
+ 
+<!-- END SCRIPTING
+================================================== -->
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- TYPE DROPDOWN TEMPLATE -->
+
+<div class="gridonequarter addmarginbottom">
+	<div class="addpaddingright firstchild ignoreboxshadow grey">
+		<span class="formlabeltext">Type</span>
+		<ui-select class="autoheight addbordergrey pull-left"  ng-model="type.selected" theme="selectize" ng-disabled="disabled">
+		  <match placeholder="Select types">{{$select.selected.name}}</match>
+		  <choices repeat="type in filtertypeOptions.stores | filter: $select.search">
+		    <span ng-bind-html="type.name | highlight: $select.search"></span>
+		  </choices>
+		</ui-select>
+	</div>
+</div>  
+
+<!-- END TYPE DROPDOWN TEMPLATE -->

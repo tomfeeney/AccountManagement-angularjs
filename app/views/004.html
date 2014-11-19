@@ -1,0 +1,563 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+<title>Account Management</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="img/favicon.ico">
+ 
+<!-- Le HTML5 shim, for IE6-8 supporting of HTML5 elements -->
+ 
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/iehtml5elements.js"></script>
+<![endif]-->
+ 
+</head>
+ 
+<body>
+ 
+<!-- ================================================== CONTAINER ================================================== -->
+<!--Insert Code below-->
+<section>
+    <div class="constrainedwidth">
+	    <div class="spacerhead firstchild lastchild">
+
+      		<div class="spacerhead firstchild lastchild">
+        		<div class="panel">Payment Method List</div>
+      		</div>
+
+	    </div>
+    </div>
+</section>
+
+<section>
+    <div class="constrainedwidth">
+	    <div class="spacerTab firstchild lastchild">
+
+	    	<ul class="nav nav-tabs" data-tabs="tabs">
+				<li class="active"><a class="textcolor" href="#payment" data-toggle="tab">Payment Methods</a></li>
+				<li><a class="textcolor" href="#billing" data-toggle="tab">Billing History</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="tab-pane active height200" id="payment">
+					<div class="verticalaligncontainer">
+						<button href="#paymentMethods" data-toggle="modal"class="primarybutton btn_lg addmarginright addmarginbottom" type="button">Enter Billing Information</button>
+					</div>
+
+					<div class="clear"></div>
+					<small>Dev Note: Above before payment method is added. <a href="004a.html">Click here</a> to view screen after payment mehtod is added.</small>
+				</div>
+				
+				<div class="tab-pane" id="billing">
+					<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+				</div>
+			</div>
+	    </div>
+    </div>
+</section>
+  
+<div class="clear"></div>
+
+<!-- Footer -->
+<section>
+	<div class="constrainedwidth">
+		<a href="003.html">prev</a> | <a href="004a.html">next</a>
+	</div>
+</section>
+<!-- END Footer -->
+ 
+<!--Insert Code above-->
+<!-- ================================================== END CONTAINER ================================================== -->
+
+<!-- ====================================================== Modals ====================================================== -->
+	<!-- Modal - payment methods -->
+	<div class="modal modalstandard fade" id="paymentMethods">
+	    <div class="modal-dialog">
+	      	<div class="modalcontainer">
+	        	<div class="modalheader">
+	          		<a href="javascript:;" class="modallogocontainer">
+	            		<span class="modallogotext"> Select Payment Type </span>
+	          		</a>
+	          		<!-- <ul class="modalmainnavright">
+	            		<li><a class="icon_close" data-dismiss="modal"><span></span></a></li>
+	          		</ul> -->
+	        	</div>
+	        	<div class="modalcontent maxcontentheight">
+
+	          		<section>
+	            		<form>
+	            			<div class="constrainedwidth">
+	              				<div class="gridonehalf">
+			                	<!-- <div class="spacer firstchild"> -->
+			                  		<figure class="hpux credit-card-block"></figure>
+			                  		<br/>
+			                    	<input id="radioappone1" tabindex="8" name="app" value="native" type="radio">
+			                      		<label for="radioappone1" class="radioalign text-center">
+			                        		<span></span>
+			                      		</label>
+			                	<!-- </div> -->
+			              		</div>
+	              				<div class="gridonehalf">
+	                			<!-- <div class="spacer lastchild"> -->
+	                  				<figure class="hpux paypal-block"></figure>
+	                  				<br/>
+	                    			<input id="radioappone2" tabindex="8" name="app" value="native" type="radio">
+	                     				<label for="radioappone2" class="radioalign text-center">
+	                        				<span></span>
+	                      				</label>
+	                			<!-- </div> -->
+	              				</div>
+	            			</div>
+	          			</form>
+	          		</section>
+
+	          		<div class="clear"></div>
+	            
+	        	</div>
+
+	          	<div class="modalfooter">
+	            	<div class="footertext buttonwrapper">
+	              		<button class="secondarybutton addmarginright" data-dismiss="modal">Cancel </button>
+	              		<button class="primarybutton" href="#paymentDetails" data-dismiss="modal" data-toggle="modal">Next </button>
+	          		</div>
+	        	</div>
+	      	</div>
+	    </div>
+	</div>
+	<!-- END Modal -->
+
+	<!-- User Info -->
+  	<div class="modal overflowscroll fade" id="paymentDetails">
+    	<div class="modal-dialog">
+	      	<div class="modalcontainer">
+	        	<div class="modalheader">
+	          		<a href="javascript:;" class="modallogocontainer">
+	            		<span class="modallogotext"> Type Payment Details </span>
+	          		</a>
+	            	<!-- <ul class="modalmainnavright">
+              		<li><a class="icon_close" data-dismiss="modal"><span></span></a></li>
+            		</ul> -->
+        		</div>
+        		<div class="modalcontentwrapper">
+          			<div class="modalcontent">
+
+	          			<!-- ========== start form ========= -->
+						<div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">Payment Method Name:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                    					<span class="formlabelinput">
+	                      						<input class="formlabelplace" placeholder="first name">
+	                    					</span>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+	          			<div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">Cardholder Name:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                  						<div class="gridModal">
+		                    					<span class="formlabelinput">
+		                      						<input placeholder="first name" class="formlabelplace">
+		                    					</span>
+		                    				</div>
+		                    				<div class="gridModalRt">
+		                    					<span class="formlabelinput">
+		                      						<input placeholder="last name" class="formlabelplace">
+		                    					</span>
+		                    				</div>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+	          			<div class="formfieldcontainer">
+							<label class="formlabel">
+								<span class="formlabeltext">Payment Method</span>
+								<span class="formlabelinput imageinputcontainer ignorepadding">
+									<select name="imagesinputwrapper" class="imagesinputwrapper">
+										<option value="amex" data-image="css/images/creditcards/americanexpress.png"></option>
+										<option value="Discover" data-image="css/images/creditcards/discovercard.png"></option>
+										<option value="Mastercard" data-image="css/images/creditcards/mastercard.png"></option>
+										<option value="Visa" data-image="css/images/creditcards/visacard.png"></option>
+										<option value="Paypal" data-image="css/images/creditcards/paypal.png"></option>
+									</select>
+								</span>
+							</label>
+						</div>
+							 
+						<div class="clear"></div>
+
+						<div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">Card Number:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                    					<span class="formlabelinput">
+	                      						<input class="formlabelplace" placeholder="card number">
+	                    					</span>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+	          			<div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">CVV:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                    					<div class="gridonehalf">
+	                    						<span class="formlabelinput">
+	                      							<input class="formlabelplace" placeholder="CVV">
+	                    						</span>
+	                    					</div>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+	          			<div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">Expiration Date:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                    					<div class="gridonehalf">
+												<span class="formlabelinput">
+													<input class="formlabelplace datepickerwrapper" placeholder="Date" type="text">
+												</span>
+											</div>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+						<div class="formfieldcontainer">
+				            <label class="formlabel">
+				              	<span class="formlabeltext">Country:*
+				                	<span class="pull-right addmarginright">
+				                  		<div class="tooltipcontainer textNoShadow">
+				                    		<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+				                      			<figure class="hpux notification error"></figure>
+				                    		</a>
+				                  		</div>
+				                	</span>
+				              	</span>
+				              	<!-- <div class="gridonehalf"> -->
+				              		<span class="formlabelinput ignorepadding">
+					                	<select class="search_selection_options" tabindex="7">
+						                  	<option value="select language">None</option>
+						                  	<optgroup label="United States">
+							                    <option value="california">California</option>
+							                    <option value="texas">Texas</option>
+							                    <option value="seattle">Seattle</option>
+							                    <option value="new york">New York</option>
+						                  	</optgroup>
+							                <option value="United Kingdom">United Kingdom</option>
+							                <option value="Afghanistan">Afghanistan</option>
+							                <option value="Aland Islands">Aland Islands</option>
+							                <option value="Albania">Albania</option>
+							                <option value="India">India</option>
+							                <option value="Pakistan">Pakistan</option>
+						                </select>
+						            </span>
+						        <!-- </div> -->
+				            </label>
+				        </div>
+				             
+				        <div class="clear"></div>
+
+				        <div class="formfieldcontainer formwithvalidation">
+				            <label class="formlabel">
+				              	<span class="formlabeltext">Address 1:*</span>
+				              		<div class="mediaformcontainer">
+				                	<div class="media">
+				                  		<span class="pull-right">
+				                    		<div class="tooltipcontainer textNoShadow">
+				                      			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+				                        			<figure class="hpux validation success"></figure>
+				                      			</a>
+				                    		</div>
+				                  		</span>
+				                  		<div class="media-body">
+				                    		<span class="formlabelinput">
+				                      			<input class="formlabelplace" placeholder="Address 1">
+				                    		</span>
+				                  		</div>
+				                	</div>
+				             	</div>
+				            </label>
+				        </div>
+				          
+				        <div class="clear"></div>
+
+				        <div class="formfieldcontainer formwithvalidation">
+				            <label class="formlabel">
+				              	<span class="formlabeltext">Address 2:</span>
+				              		<div class="mediaformcontainer">
+				                	<div class="media">
+				                  		<span class="pull-right">
+				                    		<div class="tooltipcontainer textNoShadow">
+				                      			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+				                        			<figure class="hpux validation success"></figure>
+				                      			</a>
+				                    		</div>
+				                  		</span>
+				                  		<div class="media-body">
+				                    		<span class="formlabelinput">
+				                      			<input class="formlabelplace" placeholder="Address 2">
+				                    		</span>
+				                  		</div>
+				                	</div>
+				             	</div>
+				            </label>
+				        </div>
+				          
+				        <div class="clear"></div>
+
+				        <div class="formfieldcontainer formwithvalidation">
+				            <label class="formlabel">
+				              	<span class="formlabeltext">Address 3:</span>
+				              		<div class="mediaformcontainer">
+				                	<div class="media">
+				                  		<span class="pull-right">
+				                    		<div class="tooltipcontainer textNoShadow">
+				                      			<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+				                        			<figure class="hpux validation success"></figure>
+				                      			</a>
+				                    		</div>
+				                  		</span>
+				                  		<div class="media-body">
+				                    		<span class="formlabelinput">
+				                      			<input class="formlabelplace" placeholder="Address 3">
+				                    		</span>
+				                  		</div>
+				                	</div>
+				             	</div>
+				            </label>
+				        </div>
+				          
+				        <div class="clear"></div>
+
+				         <div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">City / State:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                  						<div class="gridModal">
+		                    					<span class="formlabelinput">
+				                      				<input class="formlabelplace" placeholder="CVV">
+				                    			</span>
+		                    				</div>
+		                    				<div class="gridModalRt">
+		                    					<span class="formlabelinput ignorepadding">
+								                	<select class="search_selection_options" tabindex="7">
+									                  	<option value="select language">None</option>
+									                  	<optgroup label="United States">
+										                    <option value="california">California</option>
+										                    <option value="texas">Texas</option>
+										                    <option value="seattle">Seattle</option>
+										                    <option value="new york">New York</option>
+									                  	</optgroup>
+										                <option value="United Kingdom">United Kingdom</option>
+										                <option value="Afghanistan">Afghanistan</option>
+										                <option value="Aland Islands">Aland Islands</option>
+										                <option value="Albania">Albania</option>
+										                <option value="India">India</option>
+										                <option value="Pakistan">Pakistan</option>
+									                </select>
+									            </span>
+		                    				</div>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+				             
+				        <div class="clear"></div>
+
+				        <div class="formfieldcontainer formwithvalidation">
+	            			<label class="formlabel">
+	              				<span class="formlabeltext">Postal Code / Phone:*</span>
+	              				<div class="mediaformcontainer">
+	                				<div class="media">
+	                  					<span class="pull-right">
+	                    					<div class="tooltipcontainer textNoShadow">
+	                      						<a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+	                        						<figure class="hpux validation success"></figure>
+	                      						</a>
+	                    					</div>
+	                  					</span>
+	                  					<div class="media-body">
+	                  						<div class="gridModal">
+		                    					<span class="formlabelinput">
+		                      						<input placeholder="postal code" class="formlabelplace">
+		                    					</span>
+		                    				</div>
+		                    				<div class="gridModalRt">
+		                    					<span class="formlabelinput">
+		                      						<input placeholder="phone" class="formlabelplace">
+		                    					</span>
+		                    				</div>
+	                  					</div>
+	                				</div>
+	              				</div>
+	            			</label>
+	          			</div>
+
+	          			<div class="clear"></div>
+
+	          			<div class="formfieldcontainer">
+							<div class="formlabel">
+								<span class="formlabeltext">Set as Default Payment Method:</span>
+								<div class="gridonethird">
+									<div class="switch-toggle switch-container">
+										<input checked="" name="refreshtokenonoff" id="toggleon" type="radio">
+											<label onclick="" for="toggleon">Default</label>
+												<input name="refreshtokenonoff" id="toggleoff" type="radio">
+											<label onclick="" for="toggleoff">No</label>
+											<a></a>
+									</div>
+								</div>
+							</div>
+						</div>
+							 
+						<div class="clear"></div>
+						
+								<div class="gridtwothirds pull-right">
+									<span class="font-12"<p>Keeping the slider on default sets this Payment Method to be used by
+										default on all new purchases. It does not change the Payment Method
+										used on existing Subscriptions. To update the Payment Method on
+										existing Subscriptions, go to the <a href="#">My Products</a></p></span>
+								</div>
+							
+						<div class="clear"></div>
+	        
+	          			<span class="red font-12"><p>Fields with * (asterisks) are mandatory.</p></span>
+
+          			</div>
+        		</div>
+        		<div class="modalfooter">
+          			<div class="footertext buttonwrapper">
+            			<button type="button" class="secondarybutton addmarginright" data-dismiss="modal">Close</button>
+            			<button type="button" class="primarybutton">Save</button>
+          			</div>
+        		</div>
+      		</div>
+    	</div>
+  	</div>
+<!-- End Modal -->
+<!-- ====================================================== END Modals ====================================================== -->
+ 
+<!-- SCRIPTING (ALWAYS PUT AT THE END FOR FASTER LOADING OF PAGE)
+==================================================================== -->
+ 
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="js/code.js"></script>
+<script src="js/datepicker.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/popover.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/scrollspy.js"></script>
+<script src="js/stickyscrollspy.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/dropdownheader.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/customselect.js"></script>
+<script src="js/multiselect.js"></script>
+<script src="js/multilevelselect.js"></script>
+<script src="js/imagesselectoption.js"></script>
+<script src="js/section.js"></script>
+<script src="js/jquery.sortElements.js"></script>
+<script src="js/stickyheading.js"></script>
+<script src="js/overlay.js"></script>
+<script src="js/backgroundfocus.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/ie.js"></script>
+<script src="js/localscroll.js"></script>
+<script src="js/scrollTo-min.js"></script>
+<script src="js/imageslider.js"></script>
+<script src="js/prettify.js"></script>
+ 
+<!-- END SCRIPTING
+================================================== -->
+</body>
+</html>

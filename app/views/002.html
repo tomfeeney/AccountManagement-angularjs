@@ -1,0 +1,615 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+<title>Account Management</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="img/favicon.ico">
+ 
+<!-- Le HTML5 shim, for IE6-8 supporting of HTML5 elements -->
+ 
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/iehtml5elements.js"></script>
+<![endif]-->
+ 
+</head>
+ 
+<body>
+ 
+<!-- ================================================== CONTAINER ================================================== -->
+<!--Insert Code below-->
+<section>
+    <div class="constrainedwidth">
+	    <div class="spacerhead firstchild lastchild">
+
+	    	<div class="notificationbar successnotification">
+          		<div class="notificationiconcontainer">
+            		<div class="notificationicon successicon"></div>
+          		</div>
+                	<p class="notificationtext"><strong>Success!</strong> Your user info has been finished.</p>
+                  	<div class="notificationiconcontainer">
+                    	<div class="notificationicon successcloseicon"></div>
+                  	</div>
+            	</div>
+      		</div>
+
+      		<div class="spacerhead firstchild lastchild">
+        		<div class="panel">My Profile</div>
+      		</div>
+
+	    </div>
+    </div>
+</section>
+  
+<div class="clear"></div>
+
+<section>
+    <div class="constrainedwidth">
+	    <div class="spacer firstchild lastchild">
+
+	    	<div class="mediacontainer">
+          		<div class="media">
+            		<a class="pull-left" href="#userInfo" data-toggle="modal">
+              			<img src="img/128x128.png" alt="128x128" class="media-object-lg img-rounded">
+            		</a>
+
+            		<div class="tooltipcontainer textNoShadow ignoremargin pull-right">
+              			<a href="#userInfo" data-toggle="modal" data-placement="left" data-toggle="tooltip" class="btn btn-icon displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                			<figure class="hpux gray edit ignoremargin"></figure>
+              			</a>
+            		</div>
+
+              <div class="media-body">
+
+                <div class="clear"></div>
+
+                <table class="am_table profileTable">
+                  <thead>
+                    <tr>
+                      <th>Jane Smith</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="">Title:</td>
+                      <td class="">Sr. Admin</td>
+                    </tr>
+                    <tr>
+                      <td class="">Email:</td>
+                      <td class="">jane.smith@hp.com</td>
+                    </tr>
+                    <tr>
+                      <td class="">Password:</td>
+                      <td class=""><p>******** | <a href="#resetPass" data-toggle="modal">Reset Password</a></p></td>
+                    </tr>
+                    <tr>
+                      <td class="" class="text-left">Security Question:</td>
+                      <td class="">What is your favourite food?</td>
+                    </tr>
+                    <tr>
+                      <td class="">Country:</td>
+                      <td class="">United States</td>
+                    </tr>
+                    <tr>
+                      <td class="">Language:</td>
+                      <td class="">English</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+            </div>
+          </div>   
+        </div>
+	       
+
+	    </div>
+    </div>
+</section>
+  
+<div class="clear"></div>
+
+<!-- Footer -->
+<section>
+  <div class="constrainedwidth">
+    <a href="001b.html">prev</a> | <a href="003.html">next</a>
+  </div>
+</section>
+<!-- END Footer -->
+
+ 
+<!--Insert Code above-->
+<!-- ================================================== END CONTAINER ================================================== -->
+
+<!-- ====================================================== Modals ====================================================== -->
+
+  <!-- Reset Password -->
+  <div class="modal overflowscroll fade" id="resetPass">
+    <div class="modal-dialog">
+      <div class="modalcontainer">
+        <div class="modalheader">
+          <a href="javascript:;" class="modallogocontainer">
+            <span class="modallogotext"> Password Reset </span>
+          </a>
+            <!-- <ul class="modalmainnavright">
+              <li><a class="icon_close" data-dismiss="modal"><span></span></a></li>
+            </ul> -->
+        </div>
+        <div class="modalcontentwrapper">
+          <div class="modalcontent">
+
+            <!-- ========== start form ========= -->
+            <div class="formfieldcontainer formwithvalidation">
+              <label class="formlabel">
+                <span class="formlabeltext">Current Password:</span>
+                <div class="mediaformcontainer">
+                  <div class="media">
+                    <span class="pull-right">
+                      <div class="tooltipcontainer textNoShadow">
+                        <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                          <figure class="hpux validation success"></figure>
+                        </a>
+                      </div>
+                    </span>
+                    <div class="media-body">
+                      <span class="formlabelinput">
+                        <input placeholder="current password" class="formlabelplace" type="password">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+            
+            <div class="clear"></div>
+
+              <!-- <h5 class="grey ignoremarginbottom">Create a new password.</h5>
+                <span class="grey">
+                  <p>Enter a new password for HP Web ID below. Your password must be at lease eight characters
+                  long. It must contain at least one number and two letters, one upper case and one lower
+                  case. it cannot include three consecutive and identical characters. It cannot be the same as
+                  your HP Web ID or be any password you have used in the past year.</p>
+                </span> -->
+
+            <div class="clear"></div>
+
+            <div class="formfieldcontainer formwithvalidation">
+              <label class="formlabel">
+                <span class="formlabeltext">New Password:</span>
+                <div class="mediaformcontainer">
+                  <div class="media">
+                    <span class="pull-right">
+                      <div class="tooltipcontainer textNoShadow">
+                        <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                          <figure class="hpux validation success"></figure>
+                        </a>
+                      </div>
+                    </span>
+                    <div class="media-body">
+                      <span class="formlabelinput">
+                        <input placeholder="new password" class="formlabelplace" type="password">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+            
+            <div class="clear"></div>
+
+            <div class="formfieldcontainer formwithvalidation">
+        <label class="formlabel">
+          <span class="formlabeltext">&nbsp;</span>
+          <div class="mediaformcontainer">
+            <div class="media">
+              <span class="pull-right">
+                <!--<span class="exclamatory_icon"></span>-->
+                <p>&nbsp;</p>
+              </span>
+              <div class="media-body">
+                <div class="notificationbar successnotification textNoShadow">
+                  <!--<div class="notificationiconcontainer">
+                    <div class="notificationicon successicon"></div>
+                  </div> -->
+                  
+                    <ul class="successList">
+                      <li>Have at least one letter.</li>
+                    </ul>
+                    <ul class="successList">
+                      <li>Have at least one capital letter.</li>
+                    </ul>
+                    <ul class="alertList">
+                      <li>Have at least one number.</li>
+                    </ul>
+                    <ul class="alertList">
+                      <li>Not contain multiple identical consecutive characters.</li>
+                    </ul>
+                    <ul class="alertList">
+                      <li>Not be the same as the account name.</li>
+                    </ul>
+                    <ul class="alertList">
+                      <li>Be at least 8 characters.</li>
+                    </ul>
+                  
+                  <!-- <div class="notificationiconcontainer">
+                    <div class="notificationicon successcloseicon"></div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+      
+      <div class="clear"></div>
+
+            <div class="formfieldcontainer formwithvalidation">
+              <label class="formlabel">
+                <span class="formlabeltext">Repeat New Password:</span>
+                <div class="mediaformcontainer">
+                  <div class="media">
+                    <span class="pull-right">
+                      <div class="tooltipcontainer textNoShadow">
+                        <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                          <figure class="hpux validation success"></figure>
+                        </a>
+                      </div>
+                    </span>
+                    <div class="media-body">
+                      <span class="formlabelinput">
+                        <input placeholder="repeat new password" class="formlabelplace" type="password">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+            
+            <div class="clear"></div>
+
+          </div>
+        </div>
+        <div class="modalfooter">
+          <div class="footertext buttonwrapper">
+            <button type="button" class="secondarybutton addmarginright" data-dismiss="modal">Close</button>
+            <button type="button" class="primarybutton">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
+  
+  <!-- User Info -->
+  <div class="modal overflowscroll fade" id="userInfo">
+    <div class="modal-dialog modal-mega">
+      <div class="modalcontainer">
+        <div class="modalheader">
+          <a href="javascript:;" class="modallogocontainer">
+            <span class="modallogotext"> Edit User Information </span>
+          </a>
+            <!-- <ul class="modalmainnavright">
+              <li><a class="icon_close" data-dismiss="modal"><span></span></a></li>
+            </ul> -->
+        </div>
+        <div class="modalcontentwrapper">
+          <div class="modalcontent">
+
+          <!-- ========== start form ========= -->
+          <div class="formfieldcontainer formwithvalidation">
+            <label class="formlabel">
+              <span class="formlabeltext">Image:
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation error"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput dashedborder">
+                <div class="fileuploadcontainer verticalaligncontainer">
+                  <div class="btn-group autowidth">
+                    <figure class="hpux blue logo ignoremargintopbottom pull-left"></figure>
+                    <p class="ignoremargin pull-right addpaddingtop">Drop files here or Click here to add files.</p>
+                  </div>
+                </div>  
+              </span>
+            </label>
+          </div>
+
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer formwithvalidation">
+            <label class="formlabel">
+              <span class="formlabeltext">&nbsp;</span>
+              <div class="mediaformcontainer">
+                <div class="media">
+                  <span class="font-14 grey">
+                    <p><small>Image requirements: 100px X 100px, jpg or png format.</small></p>
+                  </span>
+                </div>
+              </div>
+            </label>
+          </div>
+          
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+              <span class="formlabeltext">Title:*
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation error"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput errorInput">
+                <input class="formlabelplace" placeholder="Title">
+              </span>
+            </label>
+          </div>
+             
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+              <span class="formlabeltext">First Name:*
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation success"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput correctInput">
+                <input class="formlabelplace" placeholder="First Name">
+              </span>
+            </label>
+          </div>
+             
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+              <span class="formlabeltext">Last Name:*
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation success"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput">
+                <input class="formlabelplace" placeholder="Last Name">
+              </span>
+            </label>
+          </div>
+             
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+              <span class="formlabeltext">Email:*
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation success"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput">
+                <input class="formlabelplace" placeholder="Email">
+              </span>
+            </label>
+          </div>
+             
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+              <span class="formlabeltext">Confrim Email:*
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation success"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput">
+                <input class="formlabelplace" placeholder="Confirm Email">
+              </span>
+            </label>
+          </div>
+             
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer formwithvalidation">
+            <label class="formlabel">
+              <span class="formlabeltext">Password:*</span>
+              <div class="mediaformcontainer">
+                <div class="media">
+                  <span class="font-14 grey">
+                    <p>{UserPassword} | <a href="#resetPass" data-toggle="modal" data-dismiss="modal">Reset Password</a></p>
+                  </span>
+                </div>
+              </div>
+            </label>
+          </div>
+          
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+              <span class="formlabeltext">Challenge Question:*
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation success"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput ignorepadding">
+                <select class="search_selection_options_withoutsearch">
+                  <option value="Favourite place">What is your favourite place?</option>
+                  <option value="Favourite food">What is your favourite food?</option>
+                  <option value="Born">Where were you born?</option>
+                </select>
+              </span>
+            </label>
+          </div>
+             
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+              <span class="formlabeltext">Your Answer:*
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation success"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput">
+                <input class="formlabelplace" placeholder="Please type question answer here">
+              </span>
+            </label>
+          </div>
+             
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+              <span class="formlabeltext">Country:*
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation success"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput ignorepadding">
+                <select class="search_selection_options" tabindex="7">
+                  <option value="select language">None</option>
+                  <optgroup label="United States">
+                    <option value="california">California</option>
+                    <option value="texas">Texas</option>
+                    <option value="seattle">Seattle</option>
+                    <option value="new york">New York</option>
+                  </optgroup>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Aland Islands">Aland Islands</option>
+                  <option value="Albania">Albania</option>
+                  <option value="India">India</option>
+                  <option value="Pakistan">Pakistan</option>
+                </select>
+              </span>
+            </label>
+          </div>
+             
+          <div class="clear"></div>
+
+          <div class="formfieldcontainer">
+            <label class="formlabel">
+              <span class="formlabeltext">Language:*
+                <span class="pull-right addmarginright">
+                  <div class="tooltipcontainer textNoShadow">
+                    <a title="" data-placement="left" data-toggle="tooltip" class="displayinlineblock pull-right" type="button" data-original-title="Tooltip content goes here.">
+                      <figure class="hpux validation success"></figure>
+                    </a>
+                  </div>
+                </span>
+              </span>
+              <span class="formlabelinput ignorepadding">
+                <select class="search_selection_options" tabindex="7">
+                  <option value="select language">None</option>
+                  <optgroup label="United States">
+                    <option value="california">California</option>
+                    <option value="texas">Texas</option>
+                    <option value="seattle">Seattle</option>
+                    <option value="new york">New York</option>
+                  </optgroup>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Aland Islands">Aland Islands</option>
+                  <option value="Albania">Albania</option>
+                  <option value="India">India</option>
+                  <option value="Pakistan">Pakistan</option>
+                </select>
+              </span>
+            </label>
+          </div>
+             
+          <div class="clear"></div>
+
+          <span class="red font-12"><p>Fields with * (asterisks) are mandatory.</p></span>
+
+          </div>
+        </div>
+        <div class="modalfooter">
+          <div class="footertext buttonwrapper">
+            <button type="button" class="secondarybutton addmarginright" data-dismiss="modal">Close</button>
+            <button type="button" class="primarybutton">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End Modal -->
+<!-- ====================================================== END Modals ====================================================== -->
+ 
+<!-- SCRIPTING (ALWAYS PUT AT THE END FOR FASTER LOADING OF PAGE)
+==================================================================== -->
+ 
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="js/code.js"></script>
+<script src="js/datepicker.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/popover.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/scrollspy.js"></script>
+<script src="js/stickyscrollspy.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/dropdownheader.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/customselect.js"></script>
+<script src="js/multiselect.js"></script>
+<script src="js/multilevelselect.js"></script>
+<script src="js/imagesselectoption.js"></script>
+<script src="js/section.js"></script>
+<script src="js/jquery.sortElements.js"></script>
+<script src="js/stickyheading.js"></script>
+<script src="js/overlay.js"></script>
+<script src="js/backgroundfocus.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/ie.js"></script>
+<script src="js/localscroll.js"></script>
+<script src="js/scrollTo-min.js"></script>
+<script src="js/imageslider.js"></script>
+<script src="js/prettify.js"></script>
+ 
+<!-- END SCRIPTING
+================================================== -->
+</body>
+</html>

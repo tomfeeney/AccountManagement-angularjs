@@ -1,0 +1,124 @@
+
+
+/* EXAMPLE CONTAINER */
+
+.example {
+  border: 1px solid #DDDDDD;
+  border-radius: 4px 4px 4px 4px;
+  background: #f2f2f2;
+  padding:10px;
+  position: relative;
+}
+
+.example:after {
+  background-color: #F5F5F5;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px 0 4px 0;
+  color: #9DA0A4;
+  content: "Example";
+  font-size: 12px;
+  font-weight: bold;
+  left: -1px;
+  position: absolute;
+  top: -16px;
+}
+
+/* END EXAMPLE CONTAINER */
+
+
+/* PRETTIFY CSS */
+
+.prettyprint {
+  border: none;
+  margin-top:-11px;
+  margin-left:-11px;
+  overflow: auto;
+  max-height: 250px;
+}
+
+pre {
+  background-color: #f8f8f8;
+  white-space: pre-wrap;       
+  white-space: -moz-pre-wrap;  
+  white-space: -pre-wrap;      
+  white-space: -o-pre-wrap;   
+  overflow-x:auto;
+  overflow-y:hidden;   
+}
+
+.prettyprint.linenums {
+  box-shadow: 40px 0 0 #FBFBFC inset, 41px 0 0 #ECECF0 inset;
+}
+
+.codefontsize{
+  font-size: 16px !important;
+}
+
+code {
+  border-radius: 4px 4px 4px 4px;
+  padding: 2px 4px;
+  white-space: pre;       
+  white-space: -moz-pre;  
+  white-space: -pre;      
+  white-space: -o-pre;   
+}
+
+.hp-code{
+  background-color: #F9F2F4;
+  color: #C7254E;
+}
+
+.hp-docs-separator {
+  margin: 40px 0 39px;
+}
+
+.pln { color: #000 }  
+
+@media screen {
+  .str { color: #080 }  
+  .kwd { color: #008 }  
+  .com { color: #800 }  
+  .typ { color: #606 } 
+  .lit { color: #066 }  
+  .pun, .opn, .clo { color: #660 }
+  .tag { color: #008 } 
+  .atn { color: #606 }  
+  .atv { color: #080 } 
+  .dec, .var { color: #606 }  
+  .fun { color: red }  
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str { color: #060 }
+  .kwd { color: #006; font-weight: bold }
+  .com { color: #600; font-style: italic }
+  .typ { color: #404; font-weight: bold }
+  .lit { color: #044 }
+  .pun, .opn, .clo { color: #440 }
+  .tag { color: #006; font-weight: bold }
+  .atn { color: #404 }
+  .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint { padding: 2px; }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { color:#DDDDDD;font-size: 13px;} /* IE indents via margin-left */
+
+/* Alternate shading for lines */
+li.L0,
+li.L2,
+li.L4,
+li.L6,
+li.L8,
+li.L10,
+li.L12,
+li.L14{ background: #eee }
+
+/* END PRETTIFY CSS */
+
+
+
+
